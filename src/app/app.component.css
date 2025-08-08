@@ -1,0 +1,320 @@
+main {
+  background-color: #f9f9f9; /* Add a subtle background color */
+  padding-bottom: 2rem; /* Add some space at the bottom */
+}
+
+main h1,
+main h2 {
+  text-align: center;
+}
+
+main h1:first-of-type {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  /* Gradient Text */
+  background: linear-gradient(45deg, #ea580c, #fb923c); /* Orange gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+main h1 + h1 {
+  /* The tagline h1 */
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+main p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 1rem auto 2rem auto;
+  text-align: center;
+}
+
+main button {
+  display: block;
+  margin: 2.5rem auto; /* Center it and give more space */
+  font-size: 1.4rem;
+  padding: 0.8rem 2.5rem;
+  background-color: #ff9800; /* A standout color like orange */
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Pill shape */
+  text-align: center; /* Ensure text is centered within the button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+main button:hover {
+  background-color: #f57c00; /* Darker orange */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.ngo-table {
+  width: 80%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ngo-table th,
+.ngo-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top; /* Align content to the top */
+}
+
+.ngo-table th {
+  background: linear-gradient(to right, #ea580c, #f97316);
+  color: white;
+  border-color: #ea580c;
+}
+
+.ngo-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.ngo-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Styles for the NGO details list */
+.ngo-table td ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ngo-table td ul li {
+  margin-bottom: 1rem;
+}
+
+.ngo-table td ul li:last-child {
+  margin-bottom: 0;
+}
+
+.ngo-table td ul li strong {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.ngo-name {
+  cursor: pointer;
+  color: #ea580c; /* Orange */
+  text-decoration: underline;
+}
+
+.ngo-name:hover {
+  color: #f97316; /* Lighter Orange */
+}
+
+.ngo-details {
+  margin-top: 0.5rem;
+  color: #555; /* Make detail text slightly less prominent */
+}
+
+.ngo-table details > summary {
+  list-style: none; /* Remove default arrow */
+}
+
+.ngo-table details > summary::-webkit-details-marker {
+  display: none; /* For Safari */
+}
+
+.ngo-table summary.ngo-name-html::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.8em;
+  transition: transform 0.2s;
+}
+
+.ngo-table details[open] > summary.ngo-name-html::before {
+  transform: rotate(90deg);
+}
+
+.ngo-name-html {
+  cursor: pointer;
+  color: #ea580c; /* Orange */
+  text-decoration: underline;
+  display: inline; /* Behaves more like the other <strong> tags */
+  font-weight: bold;
+}
+
+.ngo-table td ul li a {
+  color: #ea580c; /* Orange */
+  text-decoration: none;
+}
+
+.ngo-table td ul li a:hover {
+  text-decoration: underline;
+}
+
+.education-grid,
+.healthcare-grid,
+.women-empowerment-grid,
+.environmental-grid,
+.animal-welfare-grid,
+.disaster-relief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.education-grid section,
+.healthcare-grid section,
+.women-empowerment-grid section,
+.environmental-grid section,
+.animal-welfare-grid section,
+.disaster-relief-grid section {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  padding-left: 2rem; /* Add space for the pseudo-element border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensures pseudo-element respects border-radius */
+}
+
+.education-grid section::before,
+.healthcare-grid section::before,
+.women-empowerment-grid section::before,
+.environmental-grid section::before,
+.animal-welfare-grid section::before,
+.disaster-relief-grid section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  background-color: #e0e0e0;
+  transition: background 0.3s ease;
+}
+
+.education-grid section:hover,
+.healthcare-grid section:hover,
+.women-empowerment-grid section:hover,
+.environmental-grid section:hover,
+.animal-welfare-grid section:hover,
+.disaster-relief-grid section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-grid section:hover::before,
+.healthcare-grid section:hover::before,
+.women-empowerment-grid section:hover::before,
+.environmental-grid section:hover::before,
+.animal-welfare-grid section:hover::before,
+.disaster-relief-grid section:hover::before {
+  background: linear-gradient(180deg, #f97316, #fdba74);
+}
+
+.education-grid h3,
+.healthcare-grid h3,
+.women-empowerment-grid h3,
+.environmental-grid h3,
+.animal-welfare-grid h3,
+.disaster-relief-grid h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  /* Gradient Text */
+  background: linear-gradient(45deg, #ea580c, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.education-grid p,
+.healthcare-grid p,
+.women-empowerment-grid p,
+.environmental-grid p,
+.animal-welfare-grid p,
+.disaster-relief-grid p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #333; /* Dark text for light card background */
+  text-align: left; /* Overriding the centered text for better readability in cards */
+}
+
+/* Styling for bottom info sections */
+main > section {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #f97316, #fdba74) 1;
+}
+
+main > section h2 {
+  color: transparent; /* Needs to be transparent for gradient to show */
+  text-align: center;
+  /* Gradient Text */
+  background: linear-gradient(45deg, #ea580c, #fb923c);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+main > section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555; /* Dark text for light section background */
+}
+
+@media (max-width: 768px) {
+  .ngo-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+.hero-section {
+  padding: 2rem 1rem;
+}
+
+.info-section {
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-section p {
+  font-size: 1rem;
+  max-width: 600px; /* Improve readability for centered text */
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us-content p {
+  text-align: center;
+}
