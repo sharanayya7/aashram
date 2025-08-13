@@ -1,40 +1,77 @@
-
-.logo-link {
+ .logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none; /* Remove underline from link */
 }
 
 .logo {
-  height: 60px; /* Adjust as needed */
+  height: 40px; /* Made logo smaller */
   width: auto;
+  margin-left: 10px; /* Space between title and logo */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Made title smaller */
+  color: #333;
+  font-weight: 700;
+  animation: text-glow 2.5s infinite ease-in-out;
 }
 
 header {
   background-color: white;
   color: black;
-  padding: 10px 20px;
+  padding: 5px 20px; /* Reduced header padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative; /* For positioning the mobile menu */
+  z-index: 200; /* Ensure header is above all other content */
 }
 
 /* Hamburger Menu Icon */
 .menu-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
+  display: block; /* Show by default, hidden in desktop media query */
+  background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
-  z-index: 110; /* Ensure it's above the nav */
-  font-size: 1.5rem; /* Control icon size */
-  color: black;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  z-index: 110;
+}
+
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #333; /* Change to white if dark background */
+  border-radius: 2px;
+  left: 0;
+  transition: 0.25s ease-in-out;
+  background: black !important;
+}
+
+.menu-toggle span:nth-child(1) { top: 0px; }
+.menu-toggle span:nth-child(2) { top: 9px; }
+.menu-toggle span:nth-child(3) { top: 18px; }
+
+.menu-toggle.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
 }
 
 /* Navigation Styles (Mobile Default) */
 nav {
+  display: block; /* Explicit */
   position: absolute;
   top: 100%;
   left: 0;
@@ -42,17 +79,13 @@ nav {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  /* Animate the dropdown by transitioning opacity and transform */
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
 }
 
 nav.menu-open {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+  max-height: 300px; /* Adjust if you add more links */
 }
 
 nav ul {
@@ -62,7 +95,7 @@ nav ul {
 }
 
 nav ul li {
-  display: block; /* Vertical list on mobile */
+  display: block; /* Vertical on mobile */
   text-align: center;
   margin: 0;
 }
@@ -70,7 +103,7 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 15px;
-  color: black;
+  color: #ea580c;
   text-decoration: none;
   border-bottom: 1px solid #f0f0f0;
   transition: background-color 0.3s ease;
@@ -81,7 +114,7 @@ nav ul li:last-child a {
 }
 
 nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Lighter hover for mobile */
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Desktop Styles */
@@ -91,20 +124,17 @@ nav ul li a:hover {
   }
 
   nav {
-    position: static; /* Reset positioning */
+    position: static;
     width: auto;
     background-color: transparent;
     box-shadow: none;
-
-    /* Reset mobile animation properties for desktop view */
     display: block;
-    visibility: visible;
-    opacity: 1;
-    transform: none;
+    max-height: none;
+    overflow: visible;
   }
 
   nav ul {
-    display: flex; /* Horizontal list on desktop */
+    display: flex; /* Horizontal on desktop */
   }
 
   nav ul li {
@@ -113,13 +143,31 @@ nav ul li a:hover {
   }
 
   nav ul li a {
-    display: inline-block; /* Reset display */
+    display: inline-block;
     padding: 4px 8px;
-    border-radius: 5px;
-    border-bottom: none; /* Remove mobile border */
+    border-radius: 6px;
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+    animation: subtle-glow 3s infinite ease-in-out;
   }
 
   nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Restore desktop hover */
+    color: white;
+    background-color: #ea580c;
+    box-shadow: 0 0 10px #f97316, 0 0 20px #fdba74;
+    transform: scale(1.05);
+    animation: none;
   }
+}
+
+@keyframes subtle-glow {
+  0% { box-shadow: 0 0 3px #fdba74; }
+  50% { box-shadow: 0 0 8px #f97316; }
+  100% { box-shadow: 0 0 3px #fdba74; }
+}
+
+@keyframes text-glow {
+  0% { text-shadow: 0 0 4px #fdba74, 0 0 8px #f97316; }
+  50% { text-shadow: 0 0 8px #fdba74, 0 0 16px #f97316; }
+  100% { text-shadow: 0 0 4px #fdba74, 0 0 8px #f97316; }
 }
