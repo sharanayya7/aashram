@@ -1,8 +1,9 @@
 <!-- Main content of your application -->
 <app-header></app-header>
 
+
 <main>
-  <section class="hero-section">
+  <section class="hero-section" id="home">
     <img src="assets/img/ngo1.jpg" alt="Children smiling" class="hero-image" />
     <img src="assets/img/ngo2.jpg" alt="Children smiling" class="hero-image" />
     <div class="hero-text">
@@ -13,8 +14,9 @@
     </div>
   </section>
   <button>Start with Little</button>
-  
-  <table class="ngo-table">
+
+  <div class="table-container">
+    <table class="ngo-table">
     <thead>
       <tr>
         <th>Cause / Sector</th>
@@ -287,42 +289,352 @@
       </tr>
       <tr>
         <td>Disability-inclusive safety</td>
-        <td>FRST Foundation</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">FRST Foundation</summary>
+                <div class="ngo-details">
+                  A Mumbai-based NGO (founded in 2024) that promotes safety and
+                  inclusion for visually impaired people by providing reflective
+                  jackets, raincoats, and awareness programs to prevent road
+                  accidents.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://frst.foundation" target="_blank">frst.foundation</a>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
       <tr>
         <td>Environmental Conservation</td>
-        <td>WWF India, Greenpeace India, CSE, TERI, SankalpTaru, SayTrees,
-          Chintan</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">WWF India</summary>
+                <div class="ngo-details">
+                  Works on wildlife conservation, environmental education, and
+                  climate action to protect India’s biodiversity.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.wwfindia.org" target="_blank"
+                    >www.wwfindia.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Greenpeace India</summary>
+                <div class="ngo-details">
+                  Focuses on climate change, renewable energy, forest
+                  protection, and anti-pollution campaigns.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.greenpeace.org/india" target="_blank"
+                    >www.greenpeace.org/india</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">
+                  CSE (Centre for Science and Environment)
+                </summary>
+                <div class="ngo-details">
+                  A public interest research and advocacy group on environmental
+                  policy, pollution control, and sustainable development.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.cseindia.org" target="_blank"
+                    >www.cseindia.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">
+                  TERI (The Energy and Resources Institute)
+                </summary>
+                <div class="ngo-details">
+                  Works on clean energy, climate change, water, and sustainable
+                  resource management.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.teriin.org" target="_blank">www.teriin.org</a>
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">SankalpTaru</summary>
+                <div class="ngo-details">
+                  A tech-enabled NGO for tree plantation and carbon footprint
+                  reduction across India.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.sankalptaru.org" target="_blank"
+                    >www.sankalptaru.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">SayTrees</summary>
+                <div class="ngo-details">
+                  Engages communities in urban afforestation and environmental
+                  volunteering.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.saytrees.org" target="_blank"
+                    >www.saytrees.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Chintan</summary>
+                <div class="ngo-details">
+                  Focuses on waste management, recycling, and livelihood
+                  support for waste-pickers.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.chintan-india.org" target="_blank"
+                    >www.chintan-india.org</a
+                  >
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
       <tr>
         <td>Animal Welfare</td>
-        <td>PETA India, People for Animals (PFA), Blue Cross of India, Animal
-          Aid Unlimited, FIAPO</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">PETA India</summary>
+                <div class="ngo-details">
+                  Advocates for animal rights, veganism, and ending cruelty
+                  through campaigns and legal action.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.petaindia.com" target="_blank"
+                    >www.petaindia.com</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">
+                  People for Animals (PFA)
+                </summary>
+                <div class="ngo-details">
+                  India’s largest animal welfare organization, running rescue,
+                  rehabilitation, and animal hospitals nationwide.<br />
+                  <strong>🌐 Website:</strong>
+                  <a
+                    href="https://www.peopleforanimalsindia.org"
+                    target="_blank"
+                    >www.peopleforanimalsindia.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Blue Cross of India</summary>
+                <div class="ngo-details">
+                  Provides rescue, shelter, adoption, and veterinary care for
+                  abandoned and injured animals.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.bluecrossofindia.org" target="_blank"
+                    >www.bluecrossofindia.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Animal Aid Unlimited</summary>
+                <div class="ngo-details">
+                  Rescues and treats injured street animals and runs a sanctuary
+                  for their lifelong care.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.animalaidunlimited.org" target="_blank"
+                    >www.animalaidunlimited.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">
+                  FIAPO (Federation of Indian Animal Protection Organisations)
+                </summary>
+                <div class="ngo-details">
+                  A national network advocating for animal protection, vegan
+                  lifestyle, and policy change.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.fiapo.org" target="_blank">www.fiapo.org</a>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
       <tr>
         <td>Disaster Relief</td>
-        <td>Goonj, Doctors For You, Rapid Response, SEEDS India, Save the
-          Children, Indian Red Cross Society</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Goonj</summary>
+                <div class="ngo-details">
+                  Works on disaster relief and rural development by turning urban
+                  waste into resources for communities.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.goonj.org" target="_blank">www.goonj.org</a>
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Doctors For You</summary>
+                <div class="ngo-details">
+                  Provides emergency medical care, disaster response, and public
+                  health services in underserved areas.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.doctorsforyou.org" target="_blank"
+                    >www.doctorsforyou.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Rapid Response</summary>
+                <div class="ngo-details">
+                  Specializes in immediate disaster relief and long-term
+                  rehabilitation programs.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.rapidresponse.org.in" target="_blank"
+                    >www.rapidresponse.org.in</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">SEEDS India</summary>
+                <div class="ngo-details">
+                  Focuses on disaster preparedness, response, recovery, and
+                  resilience building.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.seedsindia.org" target="_blank"
+                    >www.seedsindia.org</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Save the Children</summary>
+                <div class="ngo-details">
+                  Works for child rights, including education, health, and
+                  disaster relief for children.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.savethechildren.in" target="_blank"
+                    >www.savethechildren.in</a
+                  >
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Indian Red Cross Society</summary>
+                <div class="ngo-details">
+                  Provides emergency aid, blood services, and disaster response
+                  across India.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.indianredcross.org" target="_blank"
+                    >www.indianredcross.org</a
+                  >
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
       <tr>
         <td>Governance &amp; public interest</td>
-        <td>Common Cause</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">Common Cause</summary>
+                <div class="ngo-details">
+                  A Delhi-based NGO that promotes governance reform,
+                  transparency, accountability, and the protection of public
+                  interest through advocacy, research, and public interest
+                  litigation.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.commoncause.in" target="_blank">www.commoncause.in</a>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
       <tr>
         <td>Digital civil liberties</td>
-        <td>Internet Freedom Foundation</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">
+                  Internet Freedom Foundation (IFF)
+                </summary>
+                <div class="ngo-details">
+                  A digital rights organization in India that works to protect
+                  online freedom, privacy, and net neutrality, and advocates
+                  for stronger data protection laws.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.internetfreedom.in" target="_blank">www.internetfreedom.in</a>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
       <tr>
         <td>Trust-enabled donation platform</td>
-        <td>GiveIndia Foundation</td>
+        <td>
+          <ul>
+            <li>
+              <details>
+                <summary class="ngo-name-html">GiveIndia Foundation</summary>
+                <div class="ngo-details">
+                  A nonprofit platform that connects donors with trusted NGOs,
+                  enabling contributions toward education, healthcare, poverty
+                  alleviation, and disaster relief projects across India.<br />
+                  <strong>🌐 Website:</strong>
+                  <a href="https://www.giveindia.org" target="_blank">www.giveindia.org</a>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </td>
       </tr>
     </tbody>
-  </table>
-  
+    </table>
+  </div>
+
   <h2>Top Education-Focused NGOs in India</h2>
   
   <div class="education-grid">
     <section>
+       <img src="assets/img/p2.jpg" alt="Children" class="image" />
       <h3>Pratham</h3>
       <p>
         Focus: Foundational learning &amp; literacy for children, youth
@@ -336,6 +648,7 @@
     </section>
 
     <section>
+      <img src="assets/img/c.jpg" alt="Children" class="image" />
       <h3>CRY (Child Rights and You)</h3>
       <p>
         Focus: Child rights, education, health, protection from
@@ -348,19 +661,9 @@
       </p>
     </section>
 
-    <section>
-      <h3>Nanhi Kali</h3>
-      <p>
-        Focus: Education and support for underprivileged girl children.<br />
-        Reach: 5,00,000+ girls in 12+ states.<br />
-        Donate:
-        <a href="https://nanhikali.org/donate" target="_blank"
-          >nanhikali.org/donate</a
-        >
-      </p>
-    </section>
 
     <section>
+      <img src="assets/img/a.jpg" alt="Children" class="image" />
       <h3>Akshaya Patra Foundation</h3>
       <p>
         <strong>Founded:</strong> 2000 – ISKCON‑backed NGO<br />
@@ -385,6 +688,7 @@
     </section>
 
     <section>
+      <img src="assets/img/t.jpg" alt="Children" class="image" />
       <h3>Teach For India</h3>
       <p>
         <strong>Founded:</strong> 2009 by Shaheen Mistri<br />
@@ -405,6 +709,7 @@
     </section>
 
     <section>
+      <img src="assets/img/b.jpg" alt="Children" class="image" />
       <h3>Bhumi</h3>
       <p>
         Bhumi is one of India’s largest youth-driven NGOs, founded in 2006. It
@@ -417,6 +722,7 @@
     </section>
 
     <section>
+      <img src="assets/img/bc.jpg" alt="Children" class="image" />
       <h3>Barefoot College</h3>
       <p>
         Barefoot College, founded in 1972 in Rajasthan, empowers rural
@@ -432,6 +738,7 @@
     </section>
 
     <section>
+      <img src="assets/img/d.jpg" alt="Children" class="image" />
       <h3>Deepalaya</h3>
       <p>
         Deepalaya, established in 1979 in Delhi, is a non-profit focused on
@@ -446,6 +753,7 @@
     </section>
 
     <section>
+      <img src="assets/img/s.jpg" alt="Children" class="image" />
       <h3>Smile Foundation</h3>
       <p>
         Smile Foundation, founded in 2002, is a national-level NGO working on
@@ -463,7 +771,9 @@
   <h2>Top Healthcare NGOs in India</h2>
 
   <div class="healthcare-grid">
+
     <section>
+      <img src="assets/img/Doctors For You.jpg" alt="Children" class="image" />
       <h3>Doctors For You</h3>
       <p>
         Doctors For You is a humanitarian NGO founded in 2007 that provides
@@ -474,6 +784,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Karuna Trust.jpg" alt="Children" class="image" />
       <h3>Karuna Trust</h3>
       <p>
         Karuna Trust is a public health NGO founded in 1986 in Karnataka. It
@@ -485,6 +796,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/SNEHA.jpg" alt="Children" class="image" />
       <h3>SNEHA</h3>
       <p>
         SNEHA (Society for Nutrition, Education and Health Action) is a
@@ -497,7 +809,9 @@
         >
       </p>
     </section>
+
     <section>
+      <img src="assets/img/The Banyan.jpg" alt="Children" class="image" />
       <h3>The Banyan</h3>
       <p>
         The Banyan is a Chennai-based NGO founded in 1993 that provides mental
@@ -509,6 +823,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/s.jpg" alt="Children" class="image" />
       <h3>Smile Foundation</h3>
       <p>
         Smile Foundation is an NGO in India (est. 2002) that provides
@@ -519,6 +834,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Aravind Eye Care3.jpg" alt="Children" class="image" />
       <h3>Aravind Eye Care</h3>
       <p>
         Aravind Eye Care is a non-profit eye care system founded in 1976 in
@@ -530,9 +846,11 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Operation ASHA2.jpg" alt="Children" class="image" />
       <h3>Operation ASHA</h3>
       <p>
-        Operation ASHA is a healthcare NGO founded in 2006 that focuses on
+       
+         Operation ASHA is a healthcare NGO founded in 2006 that focuses on
         tuberculosis (TB) detection, treatment, and awareness among
         underserved populations using low-cost, technology-enabled
         solutions.<br />
@@ -541,6 +859,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/SEWA.jpg" alt="Children" class="image" />
       <h3>SEWA</h3>
       <p>
         SEWA (Self Employed Women’s Association) is a women’s trade union
@@ -557,6 +876,7 @@
 
   <div class="women-empowerment-grid">
     <section>
+       <img src="assets/img/SEWA.jpg" alt="Children" class="image" />
       <h3>SEWA</h3>
       <p>
         <strong>Focus Area:</strong> Economic and health empowerment of
@@ -566,6 +886,7 @@
       </p>
     </section>
     <section>
+       <img src="assets/img/Nanhi Kali.jpg" alt="Children" class="image" />
       <h3>Nanhi Kali</h3>
       <p>
         <strong>Focus Area:</strong> Education for underprivileged girls<br />
@@ -574,6 +895,7 @@
       </p>
     </section>
     <section>
+       <img src="assets/img/Breakthrough1.jpg" alt="Children" class="image" />
       <h3>Breakthrough</h3>
       <p>
         <strong>Focus Area:</strong> Gender-based violence prevention, rights
@@ -583,6 +905,7 @@
       </p>
     </section>
     <section>
+       <img src="assets/img/Snehalaya.jpg" alt="Children" class="image" />
       <h3>Snehalaya</h3>
       <p>
         <strong>Focus Area:</strong> Rehabilitation, education, and rights for
@@ -592,6 +915,7 @@
       </p>
     </section>
     <section>
+       <img src="assets/img/Azad Foundation1.jpg" alt="Children" class="image" />
       <h3>Azad Foundation</h3>
       <p>
         <strong>Focus Area:</strong> Skilling women (like training women
@@ -601,6 +925,7 @@
       </p>
     </section>
     <section>
+       <img src="assets/img/Jagori.jpg" alt="Children" class="image" />
       <h3>Jagori</h3>
       <p>
         <strong>Focus Area:</strong> Women’s safety, feminist education, rural
@@ -615,6 +940,7 @@
 
   <div class="environmental-grid">
     <section>
+      <img src="assets/img/WWF India.jpg" alt="Children" class="image" />
       <h3>WWF India</h3>
       <p>
         <strong>Key Focus Area:</strong> Wildlife conservation, climate &amp;
@@ -624,6 +950,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Greenpeace India.jpg" alt="Children" class="image" />
       <h3>Greenpeace India</h3>
       <p>
         <strong>Key Focus Area:</strong> Climate change, deforestation, plastic
@@ -635,6 +962,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/CSE (Centre for Science and Environment).jpg" alt="Children" class="image" />
       <h3>CSE (Centre for Science and Environment)</h3>
       <p>
         <strong>Key Focus Area:</strong> Research and policy advocacy<br />
@@ -643,6 +971,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/TERI (The Energy and Resources Institute).jpg" alt="Children" class="image" />
       <h3>TERI (The Energy and Resources Institute)</h3>
       <p>
         <strong>Key Focus Area:</strong> Energy, environment, sustainability<br />
@@ -651,6 +980,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/SankalpTaru.jpg" alt="Children" class="image" />
       <h3>SankalpTaru</h3>
       <p>
         <strong>Key Focus Area:</strong> Tree plantation, carbon offset<br />
@@ -659,6 +989,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/SayTrees.jpg" alt="Children" class="image" />
       <h3>SayTrees</h3>
       <p>
         <strong>Key Focus Area:</strong> Urban afforestation, volunteering<br />
@@ -667,6 +998,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Chintan.jpg" alt="Children" class="image" />
       <h3>Chintan</h3>
       <p>
         <strong>Key Focus Area:</strong> Waste management and recycling<br />
@@ -682,6 +1014,7 @@
 
   <div class="animal-welfare-grid">
     <section>
+             <img src="assets/img/PETA India.jpg" alt="Children" class="image" />
       <h3>PETA India</h3>
       <p>
         <strong>Key Focus:</strong> Animal rights, cruelty prevention,
@@ -691,6 +1024,7 @@
       </p>
     </section>
     <section>
+             <img src="assets/img/People for Animals (PFA).jpg" alt="Children" class="image" />
       <h3>People for Animals (PFA)</h3>
       <p>
         <strong>Key Focus:</strong> Rescue, rehabilitation, animal
@@ -702,6 +1036,7 @@
       </p>
     </section>
     <section>
+             <img src="assets/img/Blue Cross of India.jpg" alt="Children" class="image" />
       <h3>Blue Cross of India</h3>
       <p>
         <strong>Key Focus:</strong> Animal rescue, shelter, adoption<br />
@@ -712,6 +1047,7 @@
       </p>
     </section>
     <section>
+             <img src="assets/img/Animal Aid Unlimited.jpg" alt="Children" class="image" />
       <h3>Animal Aid Unlimited</h3>
       <p>
         <strong>Key Focus:</strong> Street animal rescue, medical care<br />
@@ -722,6 +1058,7 @@
       </p>
     </section>
     <section>
+             <img src="assets/img/FIAPO (Federation of Indian Animal Protection Organisations).jpg" alt="Children" class="image" />
       <h3>FIAPO (Federation of Indian Animal Protection Organisations)</h3>
       <p>
         <strong>Key Focus:</strong> Animal rights advocacy and veganism<br />
@@ -735,6 +1072,7 @@
 
   <div class="disaster-relief-grid">
     <section>
+      <img src="assets/img/Goonj.jpg" alt="Children" class="image" />
       <h3>Goonj</h3>
       <p>
         <strong>Key Focus:</strong> Disaster relief, rural development,
@@ -744,6 +1082,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Doctors For You.jpg" alt="Children" class="image" />
       <h3>Doctors For You</h3>
       <p>
         <strong>Key Focus:</strong> Emergency medical care, disaster
@@ -753,6 +1092,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/Rapid Response.jpg" alt="Children" class="image" />
       <h3>Rapid Response</h3>
       <p>
         <strong>Key Focus:</strong> Relief, rehabilitation, and resilience
@@ -762,6 +1102,7 @@
       </p>
     </section>
     <section>
+      <img src="assets/img/SEEDS India.jpg" alt="Children" class="image" />
       <h3>SEEDS India</h3>
       <p>
         <strong>Key Focus:</strong> Disaster preparedness, recovery, and
@@ -771,6 +1112,9 @@
       </p>
     </section>
     <section>
+      
+      <img src="assets/img/Save the Children2.jpg" alt="Children" class="image" />
+
       <h3>Save the Children</h3>
       <p>
         <strong>Key Focus:</strong> Child-centered disaster relief<br />
@@ -779,6 +1123,8 @@
       </p>
     </section>
     <section>
+
+     <img src="assets/img/Indian Red Cross Society2.jpg" alt="Children" class="image" />
       <h3>Indian Red Cross Society</h3>
       <p>
         <strong>Key Focus:</strong> Emergency aid, blood services, disaster
@@ -789,7 +1135,7 @@
     </section>
   </div>
 
-  <section class="info-section">
+  <section class="info-section" id="about">
     <div class="about-us-content">
       <h2>About Us</h2>
       <p>
@@ -802,7 +1148,7 @@
     </div>
   </section>
 
-  <section class="info-section">
+  <section class="info-section" id="services">
     <h2>Our Services</h2>
     <p>
       We offer a range of services including free education programs, healthcare
@@ -812,7 +1158,7 @@
     </p>
   </section>
 
-  <section class="info-section">
+  <section class="info-section" id="contact">
     <h2>Contact</h2>
     <p>
       Have questions or want to get involved? Reach out to us! <br />

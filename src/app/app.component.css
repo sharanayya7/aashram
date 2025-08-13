@@ -1,3 +1,8 @@
+/* For smooth scrolling. Ideally, this should be in a global stylesheet like styles.css */
+:root {
+  scroll-behavior: smooth;
+}
+
 main {
   background-color: #f9f9f9; /* Add a subtle background color */
   padding-bottom: 2rem; /* Add some space at the bottom */
@@ -6,6 +11,8 @@ main {
 main h1,
 main h2 {
   text-align: center;
+  color: #d9480f; /* A nice orange to match the theme */
+  animation: h2-glowing 2.5s infinite ease-in-out;
 }
 
 main h1:first-of-type {
@@ -51,6 +58,7 @@ main button {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   font-weight: bold;
+  animation: glowing 2.5s infinite ease-in-out;
 }
 
 main button:hover {
@@ -59,9 +67,13 @@ main button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-.ngo-table {
+.table-container {
   width: 80%;
   margin: 2rem auto;
+}
+
+.ngo-table {
+  width: 100%;
   border-collapse: collapse;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -146,7 +158,7 @@ main button:hover {
 .ngo-name-html {
   cursor: pointer;
   color: #ea580c; /* Orange */
-  text-decoration: underline;
+  text-decoration: none;
   display: inline; /* Behaves more like the other <strong> tags */
   font-weight: bold;
 }
@@ -157,7 +169,7 @@ main button:hover {
 }
 
 .ngo-table td ul li a:hover {
-  text-decoration: underline;
+  color: #f97316; /* Lighter Orange on hover */
 }
 
 .education-grid,
@@ -182,14 +194,16 @@ main button:hover {
 .animal-welfare-grid section,
 .disaster-relief-grid section {
   position: relative;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1.5rem;
   padding-left: 2rem; /* Add space for the pseudo-element border */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden; /* Ensures pseudo-element respects border-radius */
+  animation: card-glowing 3s infinite ease-in-out;
 }
 
 .education-grid section::before,
@@ -215,7 +229,8 @@ main button:hover {
 .animal-welfare-grid section:hover,
 .disaster-relief-grid section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px rgba(249, 115, 22, 0.5);
+  animation-play-state: paused;
 }
 
 .education-grid section:hover::before,
@@ -240,6 +255,8 @@ main button:hover {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  /* Set a minimum height to accommodate 2 lines of text, ensuring alignment */
+  min-height: 3rem;
 }
 
 .education-grid p,
@@ -252,6 +269,19 @@ main button:hover {
   line-height: 1.5;
   color: #333; /* Dark text for light card background */
   text-align: left; /* Overriding the centered text for better readability in cards */
+  flex-grow: 1; /* Allows the paragraph to fill remaining space, aligning card bottoms */
+}
+
+.education-grid .image,
+.healthcare-grid .image,
+.women-empowerment-grid .image,
+.environmental-grid .image,
+.animal-welfare-grid .image,
+.disaster-relief-grid .image {
+  width: 100%;
+  height: 180px; /* A fixed height for uniform images */
+  object-fit: cover; /* Prevents image distortion */
+  margin-bottom: 1rem;
 }
 
 /* Styling for bottom info sections */
@@ -281,17 +311,96 @@ main > section p {
   color: #555; /* Dark text for light section background */
 }
 
+@keyframes glowing {
+  0% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 5px #ff9800;
+  }
+  50% {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), 0 0 20px #ff9800, 0 0 25px #f57c00;
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 5px #ff9800;
+  }
+}
+
+@keyframes hero-glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.7), 0 0 30px rgba(234, 88, 12, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+  }
+}
+
+@keyframes h2-glowing {
+  0% {
+    text-shadow: 0 0 3px #fdba74, 0 0 5px #f97316;
+  }
+  50% {
+    text-shadow: 0 0 10px #fdba74, 0 0 15px #f97316;
+  }
+  100% {
+    text-shadow: 0 0 3px #fdba74, 0 0 5px #f97316;
+  }
+}
+
+@keyframes card-glowing {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 3px rgba(249, 115, 22, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 0 10px rgba(249, 115, 22, 0.4);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 3px rgba(249, 115, 22, 0.2);
+  }
+}
+
 @media (max-width: 768px) {
-  .ngo-table {
-    display: block;
+  .hero-section {
+    /* Use flexbox for easy vertical stacking and centering on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image {
+    max-width: 70%; /* Allow images to be larger on mobile */
+    margin: 0 0 1rem 0; /* Adjust margin for stacked layout */
+  }
+
+  .table-container {
+    width: 95%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.2); /* Visual cue for scrolling */
+  }
+  .ngo-table {
     white-space: nowrap;
-    width: 100%;
   }
 }
 
 .hero-section {
+  position: relative;
+  overflow: hidden; /* Ensures content respects the border-radius */
+  border-radius: 15px;
+  margin: 1.5rem; /* Adds space around the hero so the glow is visible */
+  animation: hero-glowing 2.5s infinite ease-in-out;
   padding: 2rem 1rem;
+  text-align: center; /* Center inline content like images */
+}
+
+.hero-image {
+  max-width: 120%; /* On desktop, allow them to be side-by-side */
+  height: auto;
+  border-radius: 10px;
+  margin: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-section {
