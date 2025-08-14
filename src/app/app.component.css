@@ -48,7 +48,7 @@ main button {
   display: block;
   margin: 2.5rem auto; /* Center it and give more space */
   font-size: 1.4rem;
-  padding: 0.8rem 2.5rem;
+  padding: 0.4rem 2.5rem;
   background-color: #ff9800; /* A standout color like orange */
   color: #fff;
   border: none;
@@ -606,35 +606,178 @@ main > section p {
   max-width: 600px; /* Improve readability for centered text */
 }
 
-.about-us-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Why Choose Us Section */
+#why-choose-us {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  max-width: 900px;
+  margin: auto;
 }
 
-.about-us-content p {
+#why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
   text-align: center;
+  color: #333;
 }
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.points-list .icon {
+  color: #007b5e;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.points-list div {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.points-list strong {
+  color: #000;
+}
+
+/* Our Services Section */
+#services {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 900px;
+  margin: auto;
+}
+
+#services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#services p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 1rem;
+}
+
+#services .points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#services .points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+#services .icon {
+  color: #007b5e;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+#services .points-list div {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+#services .points-list strong {
+  color: #000;
+}
+
+
+
+/* About Us Section */
+#about {
+  padding: 50px 20px;
+  background: #f7f7f7;
+  max-width: 900px;
+  margin: auto;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+#about .about-us-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+#about strong {
+  color: #007b5e;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background: #fff; /* or #f9f9f9 depending on your design */
+  max-width: 900px;
+  margin: auto;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333; /* same as Services section heading color */
+}
+
+#contact p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+#contact strong {
+  color: #000;
+}
+
+
 
 /* Donate Button Styling */
 .donate-btn {
   background: linear-gradient(135deg, #ff6b6b, #ff4757);
   color: white;
-  padding: 10px 18px;
+  padding: 1px 3px; /* Made smaller for a more compact desktop view */
   border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  border-radius: 1px;
+  font-size: 0.5rem; /* Made smaller (approx 11px) */
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); /* Further reduced shadow */
 }
 
 /* Hover Effect */
 .donate-btn:hover {
   background: linear-gradient(135deg, #ff4d4d, #ff1e1e);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px); /* Subtler hover effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Focus Effect for Accessibility */
@@ -648,19 +791,52 @@ section {
   flex-direction: column;
   
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 section .donate-btn {
   align-self: flex-start; /* keeps button aligned to left inside card */
   margin-top: auto;      /* push it to bottom */
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* Mobile Friendly */
 @media (max-width: 768px) {
   .donate-btn {
-    width: 100%;
-    text-align: center;
+    /* Removed 'width: 100%' to prevent the button from stretching on mobile, keeping it small. */
   }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #ea580c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.4s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: #f97316; /* Lighter orange */
+  transform: translateY(-5px);
 }
