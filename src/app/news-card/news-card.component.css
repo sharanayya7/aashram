@@ -1,0 +1,51 @@
+
+.news-card {
+  display: flex;
+  justify-content: center;  /* Centers the card horizontally */
+  align-items: center;      /* Optional: centers vertically if container has height */        /* Allows multiple cards to wrap nicely */
+  margin: 20px;
+  max-width: 400px;
+  margin: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+
+.news-card-content {
+  padding: 15px 20px;
+}
+
+.news-card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-card-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.news-card-content a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.news-card-content a:hover {
+  color: #0056b3;
+}

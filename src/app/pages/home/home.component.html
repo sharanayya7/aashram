@@ -1,0 +1,286 @@
+<main>
+  <section class="hero-section" id="home">
+    <img src="assets/img/ngo1.jpg" alt="Children smiling" class="hero-image" />
+    <img src="assets/img/ngo2.jpg" alt="Children smiling" class="hero-image" />
+    <div class="hero-text">
+      <h1>Welcome to AASHRAM!</h1>
+      <h1>We can't help everyone....<br />But everyone can help someone.</h1>
+      <p>Aashram is dedicated to making a difference in the lives of those in need.</p>
+      
+    </div>
+  </section>
+  <div class="action-buttons">
+    <button (click)="onTopNgoClick()">TOP NGO'S</button>
+    <button (click)="onWhyNgoClick()">WHY NGO?</button>
+    <button (click)="onNgoRequestFormClick()">New NGO Request Form</button>
+  </div>
+
+
+
+
+
+
+  
+<div class="dropdown-title">Select your state and city to find the NGO nearest to you or the one you want to support.</div>
+ 
+<div class="dropdown-container">
+
+  <!-- State Dropdown -->
+  <label for="state">Select State:</label>
+  <select id="state" (change)="onStateChange($event.target.value)">
+    <option value="">-- Select State --</option>
+    <option *ngFor="let s of statesAndCities" [value]="s.state">
+      {{ s.state }}
+    </option>
+  </select>
+
+  <!-- City Dropdown -->
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <label for="city">Select City:</label>
+  <select id="city" [disabled]="!filteredCities.length">
+    <option value="">-- Select City --</option>
+    <option *ngFor="let c of filteredCities" [value]="c">
+      {{ c }}
+    </option>
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div class="ngo-container">
+
+  <!-- Child education & rights -->
+  <div class="ngo-category">
+    
+    <h2> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 24 24">
+    <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zM3 9.64V17a1 1 0 0 0 .553.894l7 3.5a1 1 0 0 0 .894 0l7-3.5A1 1 0 0 0 19 17V9.64l-7 3.182-9-4.182z"/>
+  </svg>Education </h2>
+    <ul>
+      <li>Pratham - <a href="https://pratham.org/donation" target="_blank">click here</a></li>
+      <li>CRY (Child Rights and You) - <a href="https://cry.org/donate" target="_blank">click here</a></li>
+      <li>Nanhi Kali - <a href="https://www.nanhikali.org/donate" target="_blank">click here</a></li>
+      <li>Teach For India - <a href="https://www.teachforindia.org" target="_blank">click here</a></li>
+      <li>Bhumi - <a href="https://www.bhumi.ngo" target="_blank">click here</a></li>
+      <li>Barefoot College - <a href="https://www.barefootcollege.org" target="_blank">click here</a></li>
+      <li>Deepalaya - <a href="https://www.deepalaya.org" target="_blank">click here</a></li>
+      <li>Smile Foundation - <a href="https://www.smilefoundationindia.org" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+
+
+  <!-- Disaster relief -->
+  <div class="ngo-category">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 0 1-6.32-12.9L12 15l6.32-7.9A8 8 0 0 1 12 20z"/>
+  </svg>Disaster Relief</h2>
+    <ul>
+      <li>Goonj - <a href="https://goonj.org" target="_blank">click here</a></li>
+      <li>Doctors For You - <a href="https://doctorsforyou.org" target="_blank">click here</a></li>
+      <li>Rapid Response - <a href="https://rapidresponse.org.in" target="_blank">click here</a></li>
+      <li>SEEDS India - <a href="https://www.seedsindia.org" target="_blank">click here</a></li>
+      <li>Save the Children - <a href="https://www.savethechildren.in" target="_blank">click here</a></li>
+      <li>Indian Red Cross Society - <a href="https://indianredcross.org" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+  
+
+  <!-- Animal welfare -->
+  <div class="ngo-category">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 24 24">
+    <path d="M4.5 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm15 0a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM8 20c-2.2 0-4-1.8-4-4 0-2.7 2.5-6 8-6s8 3.3 8 6c0 2.2-1.8 4-4 4H8z"/>
+  </svg>Animal Welfare</h2>
+    <ul>
+      <li>PETA India - <a href="https://www.petaindia.com" target="_blank">click here</a></li>
+      <li>People for Animals (PFA) - <a href="https://www.peopleforanimalsindia.org" target="_blank">click here</a></li>
+      <li>Blue Cross of India - <a href="https://www.bluecrossofindia.org" target="_blank">click here</a></li>
+      <li>Animal Aid Unlimited - <a href="https://animalaidunlimited.org" target="_blank">click here</a></li>
+      <li>FIAPO (Federation of Indian Animal Protection Organisations) - <a href="https://www.fiapo.org" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+  <!-- Women's empowerment -->
+  <div class="ngo-category">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 10px;">
+    <path d="M12 2a6 6 0 0 0-2 11.65V16H8v2h2v2h2v-2h2v-2h-2v-2.35A6 6 0 0 0 12 2zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+  </svg>Women’s Empowerment</h2>
+    <ul>
+      <li>Goonj - <a href="https://goonj.org" target="_blank">click here</a></li>
+      <li>SEWA - <a href="https://www.sewa.org" target="_blank">click here</a></li>
+      <li>CARE India - <a href="https://www.careindia.org" target="_blank">click here</a></li>
+    </ul>
+  </div>
+  <!-- School nutrition -->
+  <div class="ngo-category">
+    <h2>  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 10px;">
+    <path d="M12 2C10.14 2 8.35 2.74 7 4.05 5.65 2.74 3.86 2 2 2v2c1.66 0 3 1.34 3 3 0 2.97 2.16 5.43 5 5.91V22h2V12.91c2.84-.48 5-2.94 5-5.91 0-1.66 1.34-3 3-3V2c-1.86 0-3.65.74-5 2.05C15.65 2.74 13.86 2 12 2z"/>
+  </svg> School Nutrition</h2>
+    <ul>
+      <li>Akshaya Patra Foundation - <a href="https://akshayapatra.org" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+  <!-- Governance & public interest -->
+  <div class="ngo-category">
+    <h2> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000"
+    viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 10px;">
+    <path d="M3 21v-2h18v2H3zm9-18l9 6v2H3v-2l9-6zm0 4.2L5.5 11h13L12 7.2z"/>
+  </svg>Governance & Public Interest</h2>
+    <ul>
+      <li>Common Cause - <a href="https://commoncause.in" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+  <!-- Digital rights -->
+  <div class="ngo-category">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000"
+    viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 10px;">
+    <path d="M4 4h16v16H4V4zm8 14a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm-1-6a1 1 0 1 1 2 0v3h-2v-3z"/>
+  </svg>Digital Rights</h2>
+    <ul>
+      <li>Internet Freedom Foundation - <a href="https://internetfreedom.in" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+  <!-- Philanthropy platforms -->
+  <div class="ngo-category">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000"
+    viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 10px;">
+    <!-- Hand -->
+    <path d="M2 15.5c0-.83.67-1.5 1.5-1.5H8l4 2h4.5c.83 0 1.5.67 1.5 1.5S17.33 19 16.5 19H10l-4-2H3.5A1.5 1.5 0 0 1 2 15.5z"/>
+    <!-- Heart -->
+    <path d="M16 3.5c-1.54 0-2.88.99-3.5 2.44C11.88 4.49 10.54 3.5 9 3.5 6.5 3.5 5 5.5 5 7.5c0 3.5 7.5 8.5 7.5 8.5S20 11 20 7.5c0-2-1.5-4-4-4z"/>
+  </svg>Philanthropy Platforms</h2>
+    <ul>
+      <li>Give India Foundation - <a href="https://www.giveindia.org" target="_blank">click here</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+  <section class="info-section" id="about">
+    <div class="about-us-content">
+      <h2>About Us</h2>
+     <p>
+      <strong>Aashram</strong> is your bridge between compassion and action. We are an independent platform designed to bring together individuals, communities, and organizations who want to make a difference.
+    </p>
+    <p>
+      Across India, countless NGOs are working tirelessly in fields like child education, women empowerment, healthcare, environmental protection, animal welfare, rural development, and disaster relief. But for many donors, finding trustworthy NGOs and understanding their work can be a challenge. That’s where we step in.
+    </p>
+    <p>
+      <strong>Our Role:</strong> Aashram serves as a transparent connector — we don’t run NGOs ourselves, nor do we collect donations on our own. Instead, we make it easier for you to discover genuine organizations, learn about their impact, and donate directly to them through their official channels.
+    </p>
+    <p>
+      Our platform is built to save you time, provide verified information, and give you confidence that your contribution is going exactly where it’s needed. Whether you’re a first-time donor or someone looking to support multiple causes, Aashram makes your giving journey simple, safe, and meaningful.
+    </p></div>
+  </section>
+
+  <section class="info-section" id="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <ul class="points-list">
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Transparency First:</strong> We connect you directly to NGOs, ensuring your donation reaches the right hands.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Verified Listings:</strong> All NGOs featured are vetted for credibility and authenticity.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Diverse Causes:</strong> From education to environment, you can support multiple sectors in one place.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Time-Saving:</strong> No more searching endlessly; we bring trusted NGOs to your fingertips.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>User-Friendly Platform:</strong> Easy navigation and clear details make giving a smooth experience.
+      </div>
+    </li>
+  </ul>
+  
+  </section>
+
+  <section class="info-section" id="services">
+    <h2>Our Services</h2>
+    <p>We provide a complete gateway for connecting donors with impactful causes:</p>
+  <ul class="points-list">
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Verified NGO Directory:</strong> Access a curated list of NGOs across all major sectors in India.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Cause-Based Navigation:</strong> Search NGOs based on focus areas like education, health, environment, disaster relief, and more.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Direct Donation Links:</strong> Donate securely through the official NGO portals, without middlemen.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Detailed NGO Profiles:</strong> Read about each organization’s mission, history, achievements, and ongoing projects.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Impact & Awareness Stories:</strong> Stay informed with inspiring updates, urgent appeals, and campaigns.
+      </div>
+    </li>
+    <li>
+      <span class="icon">✔</span>
+      <div>
+        <strong>Easy-to-Use Interface:</strong> A seamless browsing experience to find the right NGO in minutes.
+      </div>
+    </li>
+  </ul>
+  </section>
+
+  <section class="info-section" id="contact">
+    <h2>Contact</h2>
+    <p>
+    Your feedback, suggestions, and partnerships help us grow and serve better.  
+    If you have any questions, ideas, or would like to collaborate, reach out to us:
+  </p>
+  <p>
+    <strong>Email:</strong> support&#64;aashram.org.in<br>
+    <strong>Address:</strong> Aashram, India<br>
+  </p>
+
+  </section>
+
+</main>
