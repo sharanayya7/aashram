@@ -1,3 +1,9 @@
+h2 {
+  text-align: center;
+  color: black; /* Match 'About Us' heading color */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
 .education-grid,
 .healthcare-grid,
@@ -84,6 +90,7 @@
   color: transparent;
   /* Set a minimum height to accommodate 2 lines of text, ensuring alignment */
   min-height: 3rem;
+  
 }
 
 .education-grid p,
@@ -163,101 +170,4 @@ font-size: 1.2rem; /* Slightly smaller for better balance */
 }
 
 
-
-/* Why Choose Us Section */
-#why-choose-us {
-  padding: 40px 20px;
-  background: #f9f9f9;
-  max-width: 900px;
-  margin: auto;
-}
-
-#why-choose-us h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  text-align: center;
-  color: #333;
-}
-
-.points-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.points-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.points-list .icon {
-  color: #007b5e;
-  font-size: 1.3rem;
-  line-height: 1;
-  margin-top: 2px;
-}
-
-.points-list div {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-.points-list strong {
-  color: #000;
-}
-
-/* Our Services Section */
-#services {
-  padding: 40px 20px;
-  background: #fff;
-  max-width: 900px;
-  margin: auto;
-}
-
-#services h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
-}
-
-#services p {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #555;
-  font-size: 1rem;
-}
-
-#services .points-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#services .points-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-#services .icon {
-  color: #007b5e;
-  font-size: 1.3rem;
-  line-height: 1;
-  margin-top: 2px;
-}
-
-#services .points-list div {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-#services .points-list strong {
-  color: #000;
-}
 
