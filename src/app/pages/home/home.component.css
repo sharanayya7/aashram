@@ -1,0 +1,655 @@
+main {
+  background-color: #f9f9f9; /* Add a subtle background color */
+  padding-bottom: 2rem; /* Add some space at the bottom */
+}
+
+main h1,
+main h2 {
+  text-align: center;
+  color: #d9480f; /* A nice orange to match the theme */
+  animation: h2-glowing 2.5s infinite ease-in-out;
+}
+
+main h1:first-of-type {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  /* Gradient Text */
+  background: linear-gradient(45deg, #ea580c, #fb923c); /* Orange gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+main h1 + h1 {
+  /* The tagline h1 */
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+main p {
+  font-size: 1rem;
+  color: #555;
+
+  max-width: 800px;
+  margin: 1rem auto 2rem auto;
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  margin: 2.5rem auto;
+  padding: 0 1rem; /* Add some padding on the sides */
+}
+
+/* Individual Action Button */
+.action-buttons button {
+  font-size: 1.2rem; /* Slightly smaller for better balance */
+  padding: 0.6rem 2rem;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  animation: glowing 2.5s infinite ease-in-out;
+}
+
+.action-buttons button:hover {
+  background-color: #f57c00; /* Darker orange */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Styling for bottom info sections */
+main > section {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #f97316, #fdba74) 1;
+}
+
+main > section h2 {
+  color: transparent; /* Needs to be transparent for gradient to show */
+  text-align: center;
+  /* Gradient Text */
+  background: linear-gradient(45deg, #ea580c, #fb923c);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+main > section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555; /* Dark text for light section background */
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 5px #ff9800;
+  }
+  50% {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), 0 0 20px #ff9800, 0 0 25px #f57c00;
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 0 5px #ff9800;
+  }
+}
+
+@keyframes hero-glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.7), 0 0 30px rgba(234, 88, 12, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+  }
+}
+
+@keyframes h2-glowing {
+  0% {
+    text-shadow: 0 0 3px #fdba74, 0 0 5px #f97316;
+  }
+  50% {
+    text-shadow: 0 0 10px #fdba74, 0 0 15px #f97316;
+  }
+  100% {
+    text-shadow: 0 0 3px #fdba74, 0 0 5px #f97316;
+  }
+}
+
+@keyframes card-glowing {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 3px rgba(249, 115, 22, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 0 10px rgba(249, 115, 22, 0.4);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 3px rgba(249, 115, 22, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    /* Use flexbox for easy vertical stacking and centering on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image {
+    max-width: 70%; /* Allow images to be larger on mobile */
+    margin: 0 0 1rem 0; /* Adjust margin for stacked layout */
+  }
+
+  .table-container {
+    width: 100%;
+    padding: 0 1rem; /* Add some padding so cards don't touch screen edges */
+    box-sizing: border-box;
+  }
+  .ngo-table {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  /* Force table elements to behave like blocks */
+  .ngo-table,
+  .ngo-table thead,
+  .ngo-table tbody,
+  .ngo-table th,
+  .ngo-table td,
+  .ngo-table tr {
+    display: block;
+  }
+
+  .ngo-table thead {
+    display: none; /* Hide table headers on mobile */
+  }
+
+  .ngo-table tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    overflow: hidden; /* To contain the header background */
+  }
+
+  .ngo-table td {
+    padding: 1rem;
+    border: none;
+    white-space: normal; /* Allow text to wrap */
+  }
+
+  .ngo-table td:first-child {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #d9480f;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden; /* Ensures content respects the border-radius */
+  border-radius: 15px;
+  margin: 1.5rem; /* Adds space around the hero so the glow is visible */
+  animation: hero-glowing 2.5s infinite ease-in-out;
+  padding: 2rem 1rem;
+  text-align: center; /* Center inline content like images */
+}
+
+.hero-image {
+  max-width: 120%; /* On desktop, allow them to be side-by-side */
+  height: auto;
+  border-radius: 10px;
+  margin: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-section p {
+  font-size: 1rem;
+  max-width: 600px; /* Improve readability for centered text */
+}
+
+.dropdown-title{
+    left: 24%;
+    position: relative;
+    font-size: larger;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.dropdown-container {
+  display: inline;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  left: 13%;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    left: 2%;
+  }
+}
+
+select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 30%;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  
+  @media screen and (max-width: 768px) {
+    width: 70%; /* Full width on smaller screens */
+  }
+}
+
+
+.ngo-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #fff;
+  transition: background 0.3s ease;
+}
+
+.blink {
+  animation: blinkAnim 1s ease-in-out 2;
+}
+
+@keyframes blinkAnim {
+  0% { background: #ffff99; }
+  50% { background: #ffffff; }
+  100% { background: #ffff99; }
+}
+
+
+/* Blink effect */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-start 3; /* blinks 3 times */
+  color: red; /* highlight NGOs */
+}
+
+
+/* MAIN CONTAINER */
+.ngo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;       /* slightly smaller gap */
+  padding: 20px;   /* smaller container padding */
+  background: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* INDIVIDUAL CATEGORY BOX */
+.ngo-category {
+  background: #fff;
+  border-radius: 12px;       /* slightly smaller radius */
+  width: 280px;              /* smaller width */
+  min-height: 200px;         /* slightly smaller height */
+  padding: 16px;             /* smaller padding */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ngo-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* HEADING STYLE */
+.ngo-category h2 {
+  font-size: 16px;           /* smaller heading */
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  border-bottom: 1.5px solid #e5e7eb;
+  padding-bottom: 4px;
+}
+
+/* NGO LIST AS CARDS */
+.ngo-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                 /* slightly smaller gap */
+}
+
+.ngo-category li {
+  background: #fef9f3;
+  border-radius: 6px;        /* slightly smaller radius */
+  padding: 6px 10px;         /* smaller padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;           /* smaller text */
+  box-shadow: 0 1.5px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ngo-category li:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Star before each item */
+.ngo-category li::before {
+  content: "★";
+  font-size: 13px;           /* smaller star */
+  color: #10b981;
+  margin-right: 6px;         /* smaller spacing */
+  flex-shrink: 0;
+}
+
+/* Links inside li */
+.ngo-category li a {
+  color: #ff8800;
+  font-weight: 500;
+  font-size: 13px;           /* smaller link */
+  text-decoration: none;
+}
+
+.ngo-category li a:hover {
+  text-decoration: underline;
+}
+
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+  .ngo-category {
+    width: 100%;           /* full width for mobile */
+    padding: 10px;         /* smaller padding */
+  }
+
+  .ngo-category h2 {
+    font-size: 14px;       /* smaller heading */
+  }
+
+  .ngo-category li {
+    font-size: 11px;       /* smaller text */
+    padding: 4px 8px;      /* smaller card padding */
+  }
+
+  .ngo-category li::before {
+    font-size: 11px;       /* smaller bullet/star */
+    margin-right: 4px;
+  }
+
+  .ngo-category li a {
+    font-size: 11px;       /* smaller link */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------
+   NGO List Layout
+---------------------------- */
+
+
+
+/* ---------------------------
+   Responsive Design
+---------------------------- */
+
+/* Tablet View: 2 columns */
+@media (max-width: 900px) {
+  .ngo-category {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Mobile View: 1 column */
+@media (max-width: 600px) {
+  .ngo-category {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* About Us Section */
+#about {
+  padding: 50px 20px;
+  background: #f7f7f7;
+  max-width: 900px;
+  margin: auto;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+#about .about-us-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+#about strong {
+  color: #007b5e;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background: #fff; /* or #f9f9f9 depending on your design */
+  max-width: 900px;
+  margin: auto;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333; /* same as Services section heading color */
+}
+
+#contact p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+#contact strong {
+  color: #000;
+}
+
+
+
+/* Donate Button Styling */
+.donate-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+  padding: 8px 12px; /* Increased padding for a better tap area */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 0.9rem; /* Readable font size */
+  font-weight: 600; /* Bolder text */
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.donate-btn:hover {
+  background: linear-gradient(135deg, #ff4d4d, #ff1e1e);
+  transform: translateY(-1px); /* Subtler hover effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+/* Why Choose Us Section */
+#why-choose-us {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  max-width: 900px;
+  margin: auto;
+}
+
+#why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.points-list .icon {
+  color: #007b5e;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.points-list div {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.points-list strong {
+  color: #000;
+}
+
+/* Our Services Section */
+#services {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 900px;
+  margin: auto;
+}
+
+#services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#services p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 1rem;
+}
+
+#services .points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#services .points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+#services .icon {
+  color: #007b5e;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+#services .points-list div {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+#services .points-list strong {
+  color: #000;
+}
+
+
+
+

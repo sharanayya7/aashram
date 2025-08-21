@@ -1,0 +1,263 @@
+
+.education-grid,
+.healthcare-grid,
+.women-empowerment-grid,
+.environmental-grid,
+.animal-welfare-grid,
+.disaster-relief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.education-grid section,
+.healthcare-grid section,
+.women-empowerment-grid section,
+.environmental-grid section,
+.animal-welfare-grid section,
+.disaster-relief-grid section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  padding-left: 2rem; /* Add space for the pseudo-element border */
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensures pseudo-element respects border-radius */
+  animation: card-glowing 3s infinite ease-in-out;
+}
+
+.education-grid section::before,
+.healthcare-grid section::before,
+.women-empowerment-grid section::before,
+.environmental-grid section::before,
+.animal-welfare-grid section::before,
+.disaster-relief-grid section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  background-color: #e0e0e0;
+  transition: background 0.3s ease;
+}
+
+.education-grid section:hover,
+.healthcare-grid section:hover,
+.women-empowerment-grid section:hover,
+.environmental-grid section:hover,
+.animal-welfare-grid section:hover,
+.disaster-relief-grid section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px rgba(249, 115, 22, 0.5);
+  animation-play-state: paused;
+}
+
+.education-grid section:hover::before,
+.healthcare-grid section:hover::before,
+.women-empowerment-grid section:hover::before,
+.environmental-grid section:hover::before,
+.animal-welfare-grid section:hover::before,
+.disaster-relief-grid section:hover::before {
+  background: linear-gradient(180deg, #f97316, #fdba74);
+}
+
+.education-grid h3,
+.healthcare-grid h3,
+.women-empowerment-grid h3,
+.environmental-grid h3,
+.animal-welfare-grid h3,
+.disaster-relief-grid h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  /* Gradient Text */
+  background: linear-gradient(45deg, #ea580c, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Set a minimum height to accommodate 2 lines of text, ensuring alignment */
+  min-height: 3rem;
+}
+
+.education-grid p,
+.healthcare-grid p,
+.women-empowerment-grid p,
+.environmental-grid p,
+.animal-welfare-grid p,
+.disaster-relief-grid p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #333; /* Dark text for light card background */
+  text-align: left; /* Overriding the centered text for better readability in cards */
+  flex-grow: .5; /* Allows the paragraph to fill remaining space, aligning card bottoms */
+}
+
+.education-grid .image,
+.healthcare-grid .image,
+.women-empowerment-grid .image,
+.environmental-grid .image,
+.animal-welfare-grid .image,
+.disaster-relief-grid .image {
+  width: 60%;
+  height: 120px; /* A fixed height for uniform images */
+  object-fit: cover; /* Prevents image distortion */
+  margin-bottom: 1rem;
+}
+
+
+/* Focus Effect for Accessibility */
+.donate-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.4);
+}
+
+/* Button in Card Layout */
+section {
+  flex-direction: column;
+  
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+section .donate-btn {
+  align-self: flex-start; /* keeps button aligned to left inside card */
+  margin-top: auto;      /* push it to bottom */
+  margin-bottom: 8px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .donate-btn {
+    /* The base .donate-btn style is now responsive. Add mobile-specific overrides here if needed. */
+  }
+}
+
+
+/* Donate Button Styling */
+.donate-btn {
+font-size: 1.2rem; /* Slightly smaller for better balance */
+  padding: 0.6rem 2rem;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  animation: glowing 2.5s infinite ease-in-out;
+}
+
+/* Hover Effect */
+.donate-btn:hover {
+    background-color: #f57c00;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Why Choose Us Section */
+#why-choose-us {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  max-width: 900px;
+  margin: auto;
+}
+
+#why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.points-list .icon {
+  color: #007b5e;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.points-list div {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.points-list strong {
+  color: #000;
+}
+
+/* Our Services Section */
+#services {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 900px;
+  margin: auto;
+}
+
+#services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#services p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 1rem;
+}
+
+#services .points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#services .points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+#services .icon {
+  color: #007b5e;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+#services .points-list div {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+#services .points-list strong {
+  color: #000;
+}
+

@@ -1,0 +1,28 @@
+[
+  {
+    "ngoID": 1,
+    "name": "Akshaya Patra", 
+    "category": "Food and Nutrition",
+    "logo": "assets/img/akshayapatra-logo.png",
+    "description": "Akshaya Patra is a non-profit organization that aims to eliminate classroom hunger by providing mid-day meals to school children across India.",
+    "contact": {
+      "email": "info@akshayapatra.org",
+      "phone": "+91-80-2215-6800",
+      "webURL": "https://www.akshayapatra.org",
+      "donateURL": "https://www.akshayapatra.org/donate",
+      "social": {
+        "facebook": "https://www.facebook.com/akshayapatra",
+        "twitter": "https://twitter.com/akshayapatra",
+        "instagram": "https://www.instagram.com/akshayapatra"
+      }
+    },
+    "address": {
+      "street": "No. 1, 2nd Stage, 2nd Phase, Peenya Industrial Area",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "zip": "560058"
+    },
+    "rating": 4.7, 
+    "comments": []
+  }
+]

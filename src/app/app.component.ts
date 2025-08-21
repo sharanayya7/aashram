@@ -1,22 +1,28 @@
 import { Component, HostListener } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+    // Scroll button flag
   showScrollButton = false;
-
+    // 🔹 Scroll detection
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Show the button when we scroll down 300px
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop || 0;
+
     this.showScrollButton = scrollPosition > 300;
   }
 
+  // 🔹 Scroll smoothly to top
   scrollToTop() {
-    // Smoothly scroll to the top of the page, where the navigation bar is.
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
