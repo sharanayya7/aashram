@@ -1,153 +1,134 @@
 
 .form-container {
-  max-width: 500px;
+  max-width: 800px;
   margin: 40px auto;
-  padding: 30px;
-  border-radius: 16px;
+  padding: 35px;
+  border-radius: 20px;
   background: #ffffff;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.form-container .form-header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* Left, Center, Right columns */
-  align-items: center;
-  margin-bottom: 20px;
-  gap: 10px;
-}
-
-.form-container .form-logo-container {
-  grid-column: 1 / 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-container .logo {
-  height: 40px;
-  width: auto;
-  margin-bottom: 5px;
-}
-
-.form-container h1 {
-  font-size: 1rem;
-  margin: 0;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  animation: none; /* Override global h1 animation */
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .form-container h2 {
   text-align: center;
-  font-size: 1.6rem;
-  color: #333; /* Match contact section h2 */
-  grid-column: 2 / 3; /* Center column */
-  margin: 0;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 4px;
+form h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-size: 18px;
   color: #444;
+  border-left: 4px solid #ff9800;
+  padding-left: 8px;
 }
 
-input, select, textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #ff9800;
-  outline: none;
-  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
-}
-
-/* This style is for the button inside the form-container */
-.form-container button {
-  align-self: center; /* Center the button horizontally */
-  margin-top: 15px;
-  padding: 12px;
-  background: linear-gradient(135deg, #ff9800, #e67e22);
-  color: #fff;
+form label {
+  font-size: 14px;
   font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-  width: 30%;
+  margin-bottom: 5px;
+  display: block;
+  color: #555;
 }
 
-.form-container button:hover {
-  background: linear-gradient(135deg, #e67e22, #ff9800);
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+  position: relative;
+  z-index: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+  outline: none;
+  background-color: #fff;
 }
 
 textarea {
-  min-height: 120px;
   resize: vertical;
 }
 
-/* Smooth animations */
-input, select, textarea, button {
-  transition: all 0.2s ease-in-out;
-}
-.form-container .form-note {
-  font-size: 0.9rem;
-  color: #666;
+button {
+  width: 30%;
+  padding: 14px;
+  margin: 15px auto 0;   /* auto makes it centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
   text-align: center;
-  margin-top: 15px;
 }
-/* Responsive Design */
-@media (max-width: 600px) {
-  .form-container {
-    margin: 10px;
-    padding: 10px;
-  }
 
-  .form-container .form-header {
-    grid-template-columns: 1fr; /* Stack in a single column on mobile */
-    justify-items: center;
-    gap: 15px;
-  }
 
-  .form-container .logo {
-    height: 20px; /* Smaller logo on mobile */
-  }
+button:hover {
+  background: linear-gradient(135deg, #f57c00, #e65100);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
 
-  .form-container h1 {
-    font-size: 1rem !important; /* Smaller title on mobile */
-  }
+button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
 
-  .form-container h2 {
-    font-size: 1.3rem;
-     color: #333;
-    text-align: center; /* Ensure h2 text is centered on mobile */
-    display: contents;
-  }
+/* Group input fields in grid (for state, city, pincode etc.) */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
 
-  .form-container input,
-  .form-container select,
-  .form-container textarea {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
-  .form-container button {
-    width: 50%; /* A more suitable width for mobile */
-    max-width: 200px;
-    font-size: 0.95rem;
-    padding: 12px;
-  }
+/* Highlight note section */
+.form-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  background: #fff7e6;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border-left: 5px solid #f57c00;
+  line-height: 1.6;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
 }

@@ -18,14 +18,11 @@ interface NGO {
 })
 export class HomeComponent implements OnInit {
 
-
   title = 'NGO Directory';
-
   ngos: NGO[] = [];   // 🔹 You forgot to declare this earlier
   statesAndCities: any[] = []; // 🔹 Adjusted type to any[] for flexibility
   selectedState: string = '';
   filteredCities: string[] = [];
-
 
   constructor(private http: HttpClient,
     private router: Router,
@@ -49,12 +46,12 @@ export class HomeComponent implements OnInit {
 
   onTopNgoClick() {
     // 🔹 Navigate to the top NGO page
-   this.router.navigate(['/top-ngo']);
+    this.router.navigate(['/top-ngo']);
   }
-  onWhyNgoClick(){
+  onWhyNgoClick() {
     this.router.navigate(['/why-ngo'])
   }
-  onNgoRequestFormClick(){
+  onNgoRequestFormClick() {
     this.router.navigate(['/new-ngo'])
   }
 }
