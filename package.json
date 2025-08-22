@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --configuration production --base-href \"/\" && cp CNAME dist/aashram/"
+    "deploy": "ng build --configuration production --base-href \"/\" && cp CNAME dist/aashram/ && gh-pages -d dist/aashram"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
     "@types/node": "^20.11.30",
+    "gh-pages": "^6.1.1",
     "typescript": "~5.4.5"
   }
 }
