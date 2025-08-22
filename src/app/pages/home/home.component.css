@@ -368,7 +368,7 @@ select {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;                 /* slightly smaller gap */
+  gap: 8px;                
 }
 
 .ngo-category li {
@@ -409,6 +409,20 @@ select {
   text-decoration: underline;
 }
 
+.ngo-category ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.ngo-category ul li a {
+  margin-left: auto;
+  color: #f80;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: none;
+}
 
 /* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
