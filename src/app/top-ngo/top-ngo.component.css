@@ -4,7 +4,7 @@ h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
+.elderly-care-grid,
 .education-grid,
 .healthcare-grid,
 .women-empowerment-grid,
@@ -19,7 +19,7 @@ h2 {
   background-color: #f7f7f7;
   border-radius: 8px;
 }
-
+.elderly-care-grid section,
 .education-grid section,
 .healthcare-grid section,
 .women-empowerment-grid section,
@@ -38,7 +38,7 @@ h2 {
   overflow: hidden; /* Ensures pseudo-element respects border-radius */
   animation: card-glowing 3s infinite ease-in-out;
 }
-
+.elderly-care-grid section::before,
 .education-grid section::before,
 .healthcare-grid section::before,
 .women-empowerment-grid section::before,
@@ -54,7 +54,7 @@ h2 {
   background-color: #e0e0e0;
   transition: background 0.3s ease;
 }
-
+.elderly-care-grid section:hover,
 .education-grid section:hover,
 .healthcare-grid section:hover,
 .women-empowerment-grid section:hover,
@@ -65,7 +65,7 @@ h2 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px rgba(249, 115, 22, 0.5);
   animation-play-state: paused;
 }
-
+.elderly-care-grid section:hover::before,
 .education-grid section:hover::before,
 .healthcare-grid section:hover::before,
 .women-empowerment-grid section:hover::before,
@@ -74,7 +74,7 @@ h2 {
 .disaster-relief-grid section:hover::before {
   background: linear-gradient(180deg, #f97316, #fdba74);
 }
-
+.elderly-care-grid h3,
 .education-grid h3,
 .healthcare-grid h3,
 .women-empowerment-grid h3,
@@ -92,7 +92,7 @@ h2 {
   min-height: 3rem;
   
 }
-
+.elderly-care-grid p,
 .education-grid p,
 .healthcare-grid p,
 .women-empowerment-grid p,
@@ -105,14 +105,14 @@ h2 {
   text-align: left; /* Overriding the centered text for better readability in cards */
   flex-grow: .5; /* Allows the paragraph to fill remaining space, aligning card bottoms */
 }
-
+.elderly-care-grid .image,
 .education-grid .image,
 .healthcare-grid .image,
 .women-empowerment-grid .image,
 .environmental-grid .image,
 .animal-welfare-grid .image,
 .disaster-relief-grid .image {
-  width: 60%;
+  width: 65%;
   height: 120px; /* A fixed height for uniform images */
   object-fit: cover; /* Prevents image distortion */
   margin-bottom: 1rem;
@@ -144,6 +144,18 @@ section .donate-btn {
   .donate-btn {
     /* The base .donate-btn style is now responsive. Add mobile-specific overrides here if needed. */
   }
+  .elderly-care-grid .image,
+.education-grid .image,
+.healthcare-grid .image,
+.women-empowerment-grid .image,
+.environmental-grid .image,
+.animal-welfare-grid .image,
+.disaster-relief-grid .image {
+  width: 50%;
+  height: 50%; /* A fixed height for uniform images */
+  object-fit: cover; /* Prevents image distortion */
+  margin-bottom: 1rem;
+}
 }
 
 
@@ -168,6 +180,4 @@ font-size: 1.2rem; /* Slightly smaller for better balance */
     transform: translateY(-1px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-
 

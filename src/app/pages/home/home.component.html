@@ -10,34 +10,32 @@
     </div>
   </section>
   <div class="action-buttons">
-    <button (click)="onTopNgoClick()">TOP NGO'S</button>
     <button (click)="onWhyNgoClick()">WHY NGO?</button>
+    <button (click)="onTopNgoClick()">TOP NGO'S</button>
     <button (click)="onNgoRequestFormClick()">New NGO Request Form</button>
   </div>
   
-<div class="dropdown-title">Select your state and city to find the NGO nearest to you or the one you want to support.</div>
+<!-- <div class="dropdown-title">Select your state and city to find the NGO nearest to you or the one you want to support.</div>
  
 <div class="dropdown-container">
-  <!-- State Dropdown -->
   <label for="state">Select State:</label>
-  <select id="state" (change)="onStateChange($event.target.value)">
+  <select id="state" (change)="onStateChange($event)">
     <option value="">-- Select State --</option>
     <option *ngFor="let s of statesAndCities" [value]="s.state">
       {{ s.state }}
     </option>
   </select>
 
-  <!-- City Dropdown -->
   &nbsp;&nbsp;&nbsp;&nbsp;
   <label for="city">Select City:</label>
-  <select id="city" [disabled]="!filteredCities.length">
+  <select id="city" [disabled]="!filteredCities.length" (change)="onCityChange($event)">
     <option value="">-- Select City --</option>
-    <option *ngFor="let c of filteredCities" [value]="c">
-      {{ c }}
+    <option *ngFor="let c of filteredCities" [value]="c.name">
+      {{ c.name }}
     </option>
   </select>
 </div>
-
+ -->
     
 <div class="ngo-container">
 

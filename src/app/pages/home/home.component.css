@@ -52,7 +52,7 @@ main p {
 /* Individual Action Button */
 .action-buttons button {
   font-size: 1.2rem; /* Slightly smaller for better balance */
-  padding: 0.6rem 2rem;
+  padding: 0.4rem 2rem;
   background-color: #ff9800;
   color: #fff;
   border: none;
@@ -245,7 +245,7 @@ main > section p {
 }
 
 .dropdown-title{
-    left: 24%;
+    text-align: center;
     position: relative;
     font-size: larger;
     margin-bottom: 20px;
@@ -502,7 +502,7 @@ select {
 /* Contact Section */
 #contact {
   padding: 40px 20px;
-  background: #fff; /* or #f9f9f9 depending on your design */
+  background:  #f7f7f7; 
   max-width: 900px;
   margin: auto;
 }
@@ -556,7 +556,7 @@ select {
 /* Why Choose Us Section */
 #why-choose-us {
   padding: 40px 20px;
-  background: #f9f9f9;
+  background: #f7f7f7;
   max-width: 900px;
   margin: auto;
 }
@@ -601,7 +601,7 @@ select {
 /* Our Services Section */
 #services {
   padding: 40px 20px;
-  background: #fff;
+  background:  #f7f7f7;
   max-width: 900px;
   margin: auto;
 }

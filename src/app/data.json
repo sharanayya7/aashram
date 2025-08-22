@@ -1,28 +1,823 @@
 [
   {
-    "ngoID": 1,
-    "name": "Akshaya Patra", 
-    "category": "Food and Nutrition",
-    "logo": "assets/img/akshayapatra-logo.png",
-    "description": "Akshaya Patra is a non-profit organization that aims to eliminate classroom hunger by providing mid-day meals to school children across India.",
-    "contact": {
-      "email": "info@akshayapatra.org",
-      "phone": "+91-80-2215-6800",
-      "webURL": "https://www.akshayapatra.org",
-      "donateURL": "https://www.akshayapatra.org/donate",
-      "social": {
-        "facebook": "https://www.facebook.com/akshayapatra",
-        "twitter": "https://twitter.com/akshayapatra",
-        "instagram": "https://www.instagram.com/akshayapatra"
-      }
+    "id": 1,
+    "name": "Pratham Education Foundation",
+    "category": "Education",
+    "description": "An NGO focused on improving the quality of education in India, reaching children and youth across the country.",
+    "email": "info@pratham.org",
+    "webURL": "https://www.pratham.org/",
+    "address": "Mumbai, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/pratham.org",
+      "linkedin": "https://www.linkedin.com/company/pratham",
+      "twitter": "https://twitter.com/PrathamBooks",
+      "instagram": "https://www.instagram.com/pratham_books/"
     },
-    "address": {
-      "street": "No. 1, 2nd Stage, 2nd Phase, Peenya Industrial Area",
-      "city": "Bengaluru",
-      "state": "Karnataka",
-      "zip": "560058"
+    "rating": null,
+    "comment": "Widely recognized for its innovative learning programs and impact on education."
+  },
+  {
+    "id": 2,
+    "name": "Child Rights and You (CRY)",
+    "category": "Child Rights",
+    "description": "A non-profit organization ensuring happier and healthier childhoods for underprivileged children in India.",
+    "email": "support@cry.org",
+    "webURL": "https://www.cry.org/",
+    "address": "Mumbai, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/CRYINDIA",
+      "twitter": "https://twitter.com/CRYINDIA",
+      "instagram": "https://www.instagram.com/cry_india/"
     },
-    "rating": 4.7, 
-    "comments": []
+    "rating": null,
+    "comment": "Known for its grassroots approach and advocacy for child rights."
+  },
+  {
+    "id": 3,
+    "name": "Akshaya Patra Foundation",
+    "category": "Food & Education",
+    "description": "Provides nutritious meals to children in government schools across India, aiming to eliminate classroom hunger.",
+    "email": "media@akshayapatra.org",
+    "webURL": "https://www.akshayapatra.org/",
+    "address": "Bengaluru, Karnataka, India",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/akshayapatra",
+      "twitter": "https://twitter.com/akshayapatra",
+      "instagram": "https://www.instagram.com/akshayapatra/"
+    },
+    "rating": "4/4",
+    "comment": "Highly rated for its transparency and impact on education and nutrition."
+  },
+  {
+    "id": 4,
+    "name": "Teach For India",
+    "category": "Education",
+    "description": "A nationwide movement placing talented individuals as full-time teachers in under-resourced classrooms.",
+    "email": "fellowship2022@teachforindia.org",
+    "webURL": "https://www.teachforindia.org/",
+    "address": "Mumbai, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/teachforindia",
+      "twitter": "https://twitter.com/teachforindia",
+      "instagram": "https://www.instagram.com/teachforindia/"
+    },
+    "rating": null,
+    "comment": "Empowers young leaders to address educational inequity."
+  },
+  {
+    "id": 5,
+    "name": "Bhumi",
+    "category": "Education & Community Welfare",
+    "description": "A non-profit organization promoting education, community welfare, and environmental conservation.",
+    "email": "contact@bhumi.ngo",
+    "webURL": "https://www.bhumi.ngo/",
+    "address": "Chennai, Tamil Nadu, India",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/bhumifoundationwork",
+      "twitter": "https://twitter.com/BhumiIndia",
+      "instagram": "https://www.instagram.com/bhumiindia/"
+    },
+    "rating": "5/5",
+    "comment": "Highly rated for its impactful community initiatives."
+  },
+  {
+    "id": 6,
+    "name": "Barefoot College International",
+    "category": "Sustainable Development",
+    "description": "Empowers marginalized rural communities through solar energy and skills training, focusing on women and girls.",
+    "email": "info@barefootcollege.org",
+    "webURL": "https://www.barefootcollege.org/",
+    "address": "Rolvenden, Kent, UK",
+    "state": "Kent",
+    "city": "Rolvenden",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/BarefootCollegeInternationalUK",
+      "twitter": "https://twitter.com/BarefootCollege",
+      "instagram": "https://www.instagram.com/barefootcollege/"
+    },
+    "rating": null,
+    "comment": "Pioneers in solar electrification and women's empowerment."
+  },
+  {
+    "id": 7,
+    "name": "Deepalaya",
+    "category": "Education & Disability Support",
+    "description": "Provides education and support for children with disabilities, aiming for inclusive development.",
+    "email": "support@deepalaya.org",
+    "webURL": "https://deepalaya.org/",
+    "address": "New Delhi, Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/Deepalaya",
+      "twitter": "https://twitter.com/Deepalaya",
+      "instagram": "https://www.instagram.com/deepalaya/"
+    },
+    "rating": null,
+    "comment": "Focuses on inclusive education and community development."
+  },
+  {
+    "id": 8,
+    "name": "Smile Foundation",
+    "category": "Education & Health",
+    "description": "Impacts the lives of over 1.5 million children and their families every year through education, healthcare, and livelihood programs.",
+    "email": "ritika.gupta@smilefoundation.email",
+    "webURL": "https://www.smilefoundationindia.org/",
+    "address": "New Delhi, Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/smilefoundationindia",
+      "twitter": "https://twitter.com/smilefoundationindia",
+      "instagram": "https://www.instagram.com/smilefoundationindia/"
+    },
+    "rating": null,
+    "comment": "Recognized for its comprehensive development programs."
+  },
+
+   {
+    "id": 9,
+    "name": "Doctors For You",
+    "category": "Healthcare & Emergency Relief",
+    "description": "An NGO focused on providing healthcare services to underserved communities, especially during emergencies and disasters.",
+    "email": "info@opasha.org",
+    "webURL": "https://www.opasha.org/",
+    "address": "2nd Floor, Ramjilal Market, Near GD Goenka School, Sarita Vihar, New Delhi – 110076, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/DoctorsForYouIndia",
+      "twitter": "https://twitter.com/DoctorsForYou",
+      "linkedin": "https://www.linkedin.com/company/doctorsforyou"
+    },
+    "rating": null,
+    "comment": "Known for its rapid response during health emergencies."
+  },
+  {
+    "id": 10,
+    "name": "Karuna Trust",
+    "category": "Healthcare & Rural Development",
+    "description": "An NGO that manages primary health centers in underserved regions, focusing on health system strengthening.",
+    "email": "karunatrustblr@gmail.com",
+    "webURL": "https://www.karunatrust.org/",
+    "address": "#686, 16th Main, 4th T Block, Jayanagar, Bengaluru – 560041, India",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/KarunaTrustIndia",
+      "linkedin": "https://www.linkedin.com/company/karuna-trust"
+    },
+    "rating": null,
+    "comment": "Operates in remote and tribal areas to provide accessible healthcare."
+  },
+  {
+    "id": 11,
+    "name": "SNEHA (Society for Nutrition, Education and Health Action)",
+    "category": "Public Health & Women Empowerment",
+    "description": "Focuses on improving health and well-being of women and children in urban slums through community engagement.",
+    "email": "sneha@snehamumbai.org",
+    "webURL": "https://www.snehamumbai.org/",
+    "address": "Mumbai, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/SNEHAMumbai",
+      "twitter": "https://twitter.com/SNEHAMumbai",
+      "linkedin": "https://www.linkedin.com/company/snehamumbai"
+    },
+    "rating": null,
+    "comment": "Works closely with public health systems to strengthen service delivery."
+  },
+  {
+    "id": 12,
+    "name": "The Banyan",
+    "category": "Mental Health & Rehabilitation",
+    "description": "Provides mental health services and rehabilitation for homeless women and children in Chennai.",
+    "email": "contact@thebanyan.org",
+    "webURL": "https://thebanyan.org/",
+    "address": "6th Main Rd, Mogappair Eri Scheme, Mogappair, Chennai, Tamil Nadu 600037, India",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/TheBanyanBALM",
+      "twitter": "https://twitter.com/TheBanyanIndia",
+      "linkedin": "https://www.linkedin.com/company/the-banyan-india"
+    },
+    "rating": null,
+    "comment": "Pioneers in integrating mental health care with social rehabilitation."
+  },
+  {
+    "id": 13,
+    "name": "Smile Foundation",
+    "category": "Education & Healthcare",
+    "description": "Impacts the lives of over 1.5 million children and their families every year through education, healthcare, and livelihood programs.",
+    "email": "ritika.gupta@smilefoundation.email",
+    "webURL": "https://www.smilefoundationindia.org/",
+    "address": "161 B/4, 3rd Floor, Gulmohar House, Yusuf Sarai Community Centre, New Delhi – 110049, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/smilefoundationindia",
+      "twitter": "https://twitter.com/smilefoundationindia",
+      "linkedin": "https://www.linkedin.com/company/smilefoundationindia"
+    },
+    "rating": null,
+    "comment": "Recognized for its comprehensive development programs."
+  },
+  {
+    "id": 14,
+    "name": "Aravind Eye Care System",
+    "category": "Eye Care & Healthcare",
+    "description": "A network of eye hospitals providing high-quality, affordable eye care services across India.",
+    "email": "patientcare@aravind.org",
+    "webURL": "https://aravind.org/",
+    "address": "1, Anna Nagar, Madurai, Tamil Nadu - 625 020, India",
+    "state": "Tamil Nadu",
+    "city": "Madurai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/AravindEyeCareSystem",
+      "twitter": "https://twitter.com/AravindEyeCare",
+      "linkedin": "https://www.linkedin.com/company/aravind-eye-care-system"
+    },
+    "rating": null,
+    "comment": "World-renowned for its innovative and scalable eye care model."
+  },
+  {
+    "id": 15,
+    "name": "Operation ASHA",
+    "category": "Tuberculosis Control & Healthcare",
+    "description": "Aims to eradicate tuberculosis through community-based treatment and digital health solutions.",
+    "email": "info@opasha.org",
+    "webURL": "https://www.opasha.org/",
+    "address": "2nd Floor, Ramjilal Market, Near GD Goenka School, Sarita Vihar, New Delhi – 110076, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/OperationASHA",
+      "twitter": "https://twitter.com/OperationASHA",
+      "linkedin": "https://www.linkedin.com/company/operation-asha"
+    },
+    "rating": null,
+    "comment": "Utilizes innovative technology to deliver TB treatment in underserved areas."
+  },
+  {
+    "id": 16,
+    "name": "SEWA (Self Employed Women's Association)",
+    "category": "Women's Empowerment & Livelihood",
+    "description": "Empowers women workers in the informal sector through collective action and support services.",
+    "email": "mail@sewa.org",
+    "webURL": "https://www.sewa.org/",
+    "address": "Opp. Victoria Garden, Bhadra, Ahmedabad - 380 001, India",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/SEWAIndia",
+      "twitter": "https://twitter.com/SEWAIndia",
+      "linkedin": "https://www.linkedin.com/company/sewa-india"
+    },
+    "rating": null,
+    "comment": "A grassroots movement supporting women in the unorganized sector."
+  },
+
+  {
+    "id": 17,
+    "name": "HelpAge India",
+    "category": "Elderly Care & Advocacy",
+    "description": "A leading non-profit organization in India working for the cause and care of disadvantaged elderly for more than four decades.",
+    "email": "headoffice@helpageindia.org",
+    "webURL": "https://www.helpageindia.org/",
+    "address": "C-14 Qutab Institutional Area, New Delhi - 110016, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/helpageindia",
+      "twitter": "https://twitter.com/Helpageindia",
+      "instagram": "https://www.instagram.com/helpageindia",
+      "linkedin": "https://www.linkedin.com/company/helpageindia",
+      "youtube": "https://www.youtube.com/user/helpageindia"
+    },
+    "rating": null,
+    "comment": "Empowers the elderly through social, financial, digital, and health inclusions."
+  },
+  {
+    "id": 18,
+    "name": "Silver Innings Foundation",
+    "category": "Elder Care & Dementia Support",
+    "description": "Works towards creating an elder and dementia-friendly world where ageing becomes a positive and rewarding experience.",
+    "email": "silverinnings@gmail.com",
+    "webURL": "https://www.silverinningfoundation.org/",
+    "address": "Mumbai, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/silverinningfoundation"
+    },
+    "rating": null,
+    "comment": "Focuses on elder and dementia-friendly initiatives."
+  },
+  {
+    "id": 19,
+    "name": "Agewell Foundation",
+    "category": "Senior Citizens Welfare",
+    "description": "A non-profit organization working for the welfare and empowerment of older persons in India since 1999.",
+    "email": "agewellfoundation@gmail.com",
+    "webURL": "https://www.agewellfoundation.org/",
+    "address": "M-8A, Lajpat Nagar-II, New Delhi-110024, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/agewellfoundation",
+      "twitter": "https://twitter.com/AgewellIndia",
+      "linkedin": "https://www.linkedin.com/company/agewellfoundation"
+    },
+    "rating": null,
+    "comment": "Advocates for the needs and rights of older persons."
+  },
+  {
+    "id": 20,
+    "name": "Dignity Foundation",
+    "category": "Senior Citizens Services",
+    "description": "A not-for-profit organization working for the cause of senior citizens, offering opportunities for a dignified and fulfilling life.",
+    "email": "responsedignity@dignityfoundation.com",
+    "webURL": "https://dignityfoundation.com/",
+    "address": "Mumbai, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/DignityFoundation"
+    },
+    "rating": null,
+    "comment": "Offers services like dementia care and senior citizen centers."
+  },
+  {
+    "id": 21,
+    "name": "Nightingales Medical Trust (NMT)",
+    "category": "Elder Care & Dementia Support",
+    "description": "Provides comprehensive elder care services, including dementia care, training, and livelihood programs for seniors.",
+    "email": "contact@nightingaleseldercare.com",
+    "webURL": "https://www.nightingaleseldercare.com/",
+    "address": "Bengaluru, Karnataka, India",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/NightingalesMedicalTrustDementiaCare"
+    },
+    "rating": null,
+    "comment": "Pioneers in elder care and dementia support services."
+  },
+
+  {
+    "id": 22,
+    "name": "SEWA (Self-Employed Women's Association)",
+    "category": "Women's Empowerment & Livelihood",
+    "description": "A trade union of women workers in the informal economy, SEWA aims to organize women workers to achieve full employment and self-reliance.",
+    "email": "sewa@sewa.org",
+    "webURL": "https://www.sewa.org/",
+    "address": "SEWA, Ahmedabad, Gujarat, India",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/sewa.org",
+      "twitter": "https://twitter.com/sewa_india",
+      "instagram": "https://www.instagram.com/sewa_india",
+      "linkedin": "https://www.linkedin.com/company/sewa-india"
+    },
+    "rating": null,
+    "comment": "Empowers over 2 million women across India through various initiatives."
+  },
+  {
+    "id": 23,
+    "name": "Project Nanhi Kali",
+    "category": "Education for Girls",
+    "description": "An initiative providing academic and material support to underprivileged girls, aiming to ensure their education and empowerment.",
+    "email": "info@nanhikali.org",
+    "webURL": "https://www.nanhikali.org/",
+    "address": "Nanhi Kali, India",
+    "state": "Various",
+    "city": "Various",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/NanhiKali",
+      "twitter": "https://twitter.com/nanhikali",
+      "instagram": "https://www.instagram.com/nanhikali"
+    },
+    "rating": null,
+    "comment": "Supports over 1 lakh girls across India."
+  },
+  {
+    "id": 24,
+    "name": "Breakthrough Trust",
+    "category": "Gender Equality & Human Rights",
+    "description": "A global human rights organization working to end violence against women and girls, and to promote gender equality.",
+    "email": "info@inbreakthrough.org",
+    "webURL": "https://inbreakthrough.org/",
+    "address": "Breakthrough Trust, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/inbreakthrough",
+      "twitter": "https://twitter.com/inbreakthrough",
+      "instagram": "https://www.instagram.com/inbreakthrough"
+    },
+    "rating": null,
+    "comment": "Utilizes media and arts to challenge gender norms."
+  },
+  {
+    "id": 25,
+    "name": "Snehalaya",
+    "category": "Women & Child Welfare",
+    "description": "Provides services to women, children, and LGBTQ+ communities affected by HIV/AIDS, poverty, violence, and sex trafficking.",
+    "email": "info@snehalaya.org",
+    "webURL": "https://www.snehalaya.org/",
+    "address": "Snehalaya, Ahmednagar, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Ahmednagar",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/snehalayaindia",
+      "twitter": "https://twitter.com/snehalayaindia",
+      "instagram": "https://www.instagram.com/snehalayaindia"
+    },
+    "rating": null,
+    "comment": "Offers comprehensive support to marginalized communities."
+  },
+  {
+    "id": 26,
+    "name": "Azad Foundation",
+    "category": "Women's Empowerment & Livelihood",
+    "description": "Works with disadvantaged women in India to achieve economic empowerment through non-traditional livelihoods.",
+    "email": "info@azadfoundation.com",
+    "webURL": "https://www.azadfoundation.com/",
+    "address": "Azad Foundation, New Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/azadfoundationindia",
+      "twitter": "https://twitter.com/azadfoundation",
+      "instagram": "https://www.instagram.com/azadfoundationindia"
+    },
+    "rating": null,
+    "comment": "Empowers women through skill development and leadership training."
+  },
+  {
+    "id": 27,
+    "name": "Jagori",
+    "category": "Women's Rights & Advocacy",
+    "description": "A women's resource and training center that works to inform, inspire, and empower women through innovative approaches.",
+    "email": "info@jagori.org",
+    "webURL": "https://www.jagori.org/",
+    "address": "Jagori, New Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/jagori.org",
+      "twitter": "https://twitter.com/jagoridelhi",
+      "instagram": "https://www.instagram.com/jagoridelhi"
+    },
+    "rating": null,
+    "comment": "Focuses on feminist issues and supports women in leadership roles."
+  },
+
+   {
+    "id": 28,
+    "name": "WWF India",
+    "category": "Environmental Conservation",
+    "description": "WWF India is a leading conservation organization working towards reducing the degradation of the Earth's natural environment and building a future in which humans live in harmony with nature.",
+    "email": "contact@wwfindia.net",
+    "webURL": "https://www.wwfindia.org/",
+    "address": "172-B Lodi Road, PO Box 3058, New Delhi 110 003, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/wwfindia",
+      "twitter": "https://twitter.com/WWFINDIA",
+      "instagram": "https://www.instagram.com/wwfindia",
+      "linkedin": "https://www.linkedin.com/company/wwfindia"
+    },
+    "rating": null,
+    "comment": "WWF India is known for its extensive work in wildlife conservation and environmental education."
+  },
+  {
+    "id": 29,
+    "name": "Greenpeace India",
+    "category": "Environmental Advocacy",
+    "description": "Greenpeace India is an independent environmental organization that uses peaceful protest and creative communication to expose global environmental problems and promote solutions that are essential to a green and peaceful future.",
+    "email": "supporter.services.in@greenpeace.org",
+    "webURL": "https://www.greenpeace.org/india/en/",
+    "address": "New No.47, Old No.22, 2nd Cross Street, Ellaiamman Colony, Gopalapuram, Chennai – 600086, India",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/greenpeaceindia",
+      "twitter": "https://twitter.com/greenpeaceindia",
+      "instagram": "https://www.instagram.com/greenpeaceindia",
+      "linkedin": "https://www.linkedin.com/company/greenpeaceindia"
+    },
+    "rating": null,
+    "comment": "Greenpeace India is recognized for its impactful campaigns on climate change and pollution."
+  },
+  {
+    "id": 30,
+    "name": "Centre for Science and Environment (CSE)",
+    "category": "Environmental Research & Policy",
+    "description": "CSE is a public interest research and advocacy organization that promotes sustainable development through policy research, capacity building, and public engagement.",
+    "email": "cse@cseindia.org",
+    "webURL": "https://www.cseindia.org/",
+    "address": "41, Tughlakabad Institutional Area, New Delhi-110062, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/cseindia",
+      "twitter": "https://twitter.com/cseindia",
+      "linkedin": "https://www.linkedin.com/company/cseindia"
+    },
+    "rating": null,
+    "comment": "CSE is known for its rigorous research and advocacy on environmental issues."
+  },
+  {
+    "id": 31,
+    "name": "TERI (The Energy and Resources Institute)",
+    "category": "Sustainable Development & Research",
+    "description": "TERI is a leading think tank in the field of energy, environment, and sustainable development, working towards promoting sustainable development through research and policy advocacy.",
+    "email": "mailbox@teri.res.in",
+    "webURL": "https://www.teriin.org/",
+    "address": "Darbari Seth Block, Core 6C, India Habitat Centre, Lodhi Road, New Delhi - 110 003, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/TERIIndia",
+      "twitter": "https://twitter.com/TERI_India",
+      "linkedin": "https://www.linkedin.com/company/teri-india"
+    },
+    "rating": null,
+    "comment": "TERI is acclaimed for its contributions to sustainable energy solutions and climate change mitigation."
+  },
+  {
+    "id": 32,
+    "name": "SankalpTaru Foundation",
+    "category": "Environmental Conservation & Community Engagement",
+    "description": "SankalpTaru Foundation is a non-profit organization that focuses on tree plantation and environmental conservation through community engagement and technology.",
+    "email": "wishy@sankalptaru.org",
+    "webURL": "https://sankalptaru.org/",
+    "address": "Plot no. 12, Dohran Khas, Kishanpur, Near ST. Xaviers School, Canal Road, Dehradun-248001, India",
+    "state": "Uttarakhand",
+    "city": "Dehradun",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/SankalpTaru",
+      "twitter": "https://twitter.com/SankalpTaru",
+      "instagram": "https://www.instagram.com/sankalptaru",
+      "linkedin": "https://www.linkedin.com/company/sankalptaru"
+    },
+    "rating": null,
+    "comment": "SankalpTaru is known for its innovative approach to environmental conservation through technology."
+  },
+  {
+    "id": 33,
+    "name": "SayTrees Environmental Trust",
+    "category": "Urban Forestry & Environmental Education",
+    "description": "SayTrees is a Bengaluru-based non-profit organization that focuses on urban forestry, environmental education, and community engagement for a greener planet.",
+    "email": "info@saytrees.org",
+    "webURL": "https://www.saytrees.org/",
+    "address": "No 6, 1st Floor, ST Main Road, opposite Concorde Midway City, Appt, Basapura, Bengaluru, Karnataka 560100, India",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/SayTrees",
+      "twitter": "https://twitter.com/SayTrees",
+      "instagram": "https://www.instagram.com/saytrees",
+      "linkedin": "https://www.linkedin.com/company/saytrees"
+    },
+    "rating": null,
+    "comment": "SayTrees is recognized for its extensive tree plantation drives and environmental awareness programs."
+  },
+  {
+    "id": 34,
+    "name": "Chintan Environmental Research and Action Group",
+    "category": "Waste Management & Environmental Advocacy",
+    "description": "Chintan is a Delhi-based non-profit organization that works on issues related to waste management, environmental justice, and sustainable development.",
+    "email": "info@chintan-india.org",
+    "webURL": "https://www.chintan-india.org/",
+    "address": "Chintan Environmental Research and Action Group, Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/chintanindia",
+      "twitter": "https://twitter.com/chintanindia",
+      "linkedin": "https://www.linkedin.com/company/chintan-india"
+    },
+    "rating": null,
+    "comment": "Chintan is known for its grassroots efforts in waste management and environmental advocacy."
+  },
+
+  
+  {
+    "id": 35,
+    "name": "PETA India",
+    "category": "Animal Rights & Advocacy",
+    "description": "PETA India is a leading animal rights organization that works to protect animals from cruelty and exploitation through campaigns, education, and legal advocacy.",
+    "email": "info@petaindia.org",
+    "webURL": "https://www.petaindia.com/",
+    "address": "Mumbai, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/petaindia",
+      "twitter": "https://twitter.com/petaindia",
+      "instagram": "https://www.instagram.com/petaindia",
+      "linkedin": "https://www.linkedin.com/company/petaindia"
+    },
+    "rating": null,
+    "comment": "PETA India is known for its impactful campaigns and celebrity endorsements."
+  },
+  {
+    "id": 36,
+    "name": "People for Animals (PFA)",
+    "category": "Animal Welfare & Rescue",
+    "description": "People for Animals is India's largest animal welfare organization, dedicated to rescuing and rehabilitating animals in distress.",
+    "email": "gandhim@exmpls.sansad.in",
+    "webURL": "https://www.peopleforanimalsindia.org/",
+    "address": "4-T, DCM Building, 16 Barakhamba Road, New Delhi 110001, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/people4animals",
+      "twitter": "https://twitter.com/people4animals",
+      "instagram": "https://www.instagram.com/people4animals"
+    },
+    "rating": null,
+    "comment": "PFA operates numerous shelters and rescue centers across India."
+  },
+  {
+    "id": 37,
+    "name": "Blue Cross of India",
+    "category": "Animal Rescue & Welfare",
+    "description": "Blue Cross of India is a Chennai-based organization that provides shelter, medical care, and rehabilitation to animals in need.",
+    "email": "bluecrossofindia@gmail.com",
+    "webURL": "https://www.bluecross.org.in/",
+    "address": "No: 72, Velacherry Road, Guindy, Chennai – 600 032, Tamil Nadu, India",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/bluecrossofindia",
+      "twitter": "https://twitter.com/bluecrossofindia",
+      "instagram": "https://www.instagram.com/bluecrossofindia"
+    },
+    "rating": null,
+    "comment": "Known for its animal rescue operations and public awareness campaigns."
+  },
+  {
+    "id": 38,
+    "name": "Animal Aid Unlimited",
+    "category": "Animal Rescue & Rehabilitation",
+    "description": "Animal Aid Unlimited is a Udaipur-based organization that rescues and rehabilitates injured and sick animals.",
+    "email": "animalaidunlimited@gmail.com",
+    "webURL": "https://animalaidunlimited.org/",
+    "address": "Udaipur, Rajasthan, India",
+    "state": "Rajasthan",
+    "city": "Udaipur",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/AnimalAidUnlimited",
+      "twitter": "https://twitter.com/AnimalAidIndia",
+      "instagram": "https://www.instagram.com/animalaidunlimited"
+    },
+    "rating": null,
+    "comment": "Renowned for its 24/7 rescue services and rehabilitation center."
+  },
+  {
+    "id": 39,
+    "name": "FIAPO (Federation of Indian Animal Protection Organisations)",
+    "category": "Animal Protection Network",
+    "description": "FIAPO is a national federation that unites animal protection organizations across India to amplify their collective voice and impact.",
+    "email": "mail@fiapo.org",
+    "webURL": "https://www.fiapo.org/",
+    "address": "New Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/fiapoindia",
+      "twitter": "https://twitter.com/fiapoindia",
+      "instagram": "https://www.instagram.com/fiapoindia"
+    },
+    "rating": null,
+    "comment": "Plays a pivotal role in policy advocacy and animal rights campaigns."
+  },
+
+  {
+    "id": 40,
+    "name": "Goonj",
+    "category": "Community Development & Humanitarian Aid",
+    "description": "Goonj is a non-governmental organization headquartered in New Delhi, India. It focuses on addressing essential needs such as clothing and other urban surplus materials to support rural development and disaster relief efforts across India.",
+    "email": "info@goonj.org",
+    "webURL": "https://goonj.org/",
+    "address": "New Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/goonj.org/",
+      "twitter": "https://twitter.com/goonj",
+      "instagram": "https://www.instagram.com/goonj/"
+    },
+    "rating": null,
+    "comment": "Goonj is known for its innovative approach to community development and disaster relief."
+  },
+  {
+    "id": 41,
+    "name": "Doctors For You (DFY)",
+    "category": "Healthcare & Disaster Relief",
+    "description": "Doctors For You Foundation is dedicated to uplifting healthcare across India through the organization of health camps and awareness programs. Their initiatives aim to provide essential medical services and educate communities about health and wellness.",
+    "email": "contact@doctorsforyou.org",
+    "webURL": "https://www.doctorsforyou.org/",
+    "address": "Mumbai, Maharashtra, India",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/DFYIndia/",
+      "twitter": "https://twitter.com/DFYIndia",
+      "instagram": "https://www.instagram.com/dfyindia/"
+    },
+    "rating": null,
+    "comment": "DFY is recognized for its comprehensive healthcare initiatives and disaster response efforts."
+  },
+  {
+    "id": 42,
+    "name": "Rapid Response",
+    "category": "Disaster Relief & Humanitarian Aid",
+    "description": "Rapid Response is India's first disaster relief NGO, providing emergency assistance and long-term solutions to victims of natural disasters. They offer food, medical, shelter, education, livelihood, and disaster risk reduction programs.",
+    "email": "info@rapidresponse.org.in",
+    "webURL": "https://www.rapidresponse.org.in/",
+    "address": "Chennai, Tamil Nadu, India",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/RapidResponseIndia/",
+      "twitter": "https://twitter.com/RapidResponseIN",
+      "instagram": "https://www.instagram.com/rapidresponseindia/"
+    },
+    "rating": null,
+    "comment": "Rapid Response is lauded for its swift and effective disaster response operations."
+  },
+  {
+    "id": 43,
+    "name": "SEEDS India",
+    "category": "Disaster Management & Community Resilience",
+    "description": "SEEDS (Sustainable Environment and Ecological Development Society) is a non-profit organization that enables community resilience through practical solutions in disaster readiness, response, and rehabilitation.",
+    "email": "info@seedsindia.org",
+    "webURL": "https://www.seedsindia.org/",
+    "address": "New Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/SEEDS.IND/",
+      "twitter": "https://twitter.com/SEEDS_INDIA",
+      "instagram": "https://www.instagram.com/seeds_india/"
+    },
+    "rating": null,
+    "comment": "SEEDS India is known for its innovative approaches to disaster management and community resilience."
+  },
+  {
+    "id": 44,
+    "name": "Save the Children India (Bal Raksha Bharat)",
+    "category": "Child Welfare & Education",
+    "description": "Save the Children India, also known as Bal Raksha Bharat, is a non-profit organization working to improve the lives of marginalized children in India. They focus on education, healthcare, and protection to ensure every child has the opportunity to thrive.",
+    "email": "info@savethechildrenindia.org",
+    "webURL": "https://www.savethechildrenindia.org/",
+    "address": "Gurugram, Haryana, India",
+    "state": "Haryana",
+    "city": "Gurugram",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/SaveTheChildrenIndia/",
+      "twitter": "https://twitter.com/STC_India",
+      "instagram": "https://www.instagram.com/savethechildrenindia/"
+    },
+    "rating": null,
+    "comment": "Save the Children India is renowned for its impactful programs aimed at child welfare and education."
+  },
+  {
+    "id": 6,
+    "name": "Indian Red Cross Society",
+    "category": "Humanitarian Aid & Emergency Services",
+    "description": "The Indian Red Cross Society is a voluntary humanitarian organization that provides relief in times of disasters and emergencies and promotes health and care of vulnerable people and communities.",
+    "email": "support@ircsfa.org",
+    "webURL": "https://www.indianredcross.org/",
+    "address": "New Delhi, India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/ircsofficial/",
+      "twitter": "https://twitter.com/ircsofficial",
+      "instagram": "https://www.instagram.com/ircsofficial/"
+    },
+    "rating": null,
+    "comment": "The Indian Red Cross Society is recognized for its extensive network and humanitarian services across India."
   }
+
+  
 ]

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 interface NGO {
   name: string;
   website: string;
@@ -9,43 +10,61 @@ interface NGO {
   rating: number;
 }
 
+interface City {
+  name: string;
+  ngos: NGO[];
+}
+
+interface State {
+  state: string;
+  cities: City[];
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
   title = 'NGO Directory';
-  ngos: NGO[] = [];   // 🔹 You forgot to declare this earlier
-  statesAndCities: any[] = []; // 🔹 Adjusted type to any[] for flexibility
+  
+  statesAndCities: State[] = [];
+  filteredCities: City[] = [];
+  filteredNgos: NGO[] = [];
+
   selectedState: string = '';
-  filteredCities: string[] = [];
+  selectedCity: string = '';
 
   constructor(private http: HttpClient,
     private router: Router,
   ) { }
 
-  // 🔹 Angular lifecycle hook
-  ngOnInit(): void {
-    // this.http.get<NGO[]>('assets/data/ngos.json').subscribe(data => {
-    //   this.ngos = data;
-    // });
-    this.http.get('assets/JSON/state-city.json').subscribe(Addressdata => {
-      this.statesAndCities = Addressdata as any[]; // 🔹 Adjusted type to any[]
+ ngOnInit(): void {
+    this.http.get<State[]>('assets/ngos.json').subscribe(data => {
+      this.statesAndCities = data;
     });
   }
-  // 🔹 State and city data
-  onStateChange(state: string) {
-    this.selectedState = state;
-    const stateObj = this.statesAndCities.find(s => s.state === state);
-    this.filteredCities = stateObj ? stateObj.city : [];
+
+  // ✅ method exists now
+  onStateChange(stateName: string) {
+    const state = this.statesAndCities.find(s => s.state === stateName);
+    this.filteredCities = state ? state.cities : [];
+    this.filteredNgos = [];
+    this.selectedCity = '';
   }
 
+  // ✅ method exists now
+  onCityChange(cityName: string) {
+    const city = this.filteredCities.find(c => c.name === cityName);
+    this.filteredNgos = city ? city.ngos : [];
+  }
+
+
+
   onTopNgoClick() {
-    // 🔹 Navigate to the top NGO page
     this.router.navigate(['/top-ngo']);
   }
   onWhyNgoClick() {
